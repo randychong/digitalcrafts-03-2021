@@ -2,10 +2,10 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/city.jpeg') {
-        myImage.setAttribute('src','images/retreat-2020.jpg');
+    if(mySrc === '/week1/day1/prework/images/city.jpeg') {
+        myImage.setAttribute('src','/week1/day1/prework/images/retreat-2020.jpg');
     } else {
-        myImage.setAttribute('src','images/city.jpeg');
+        myImage.setAttribute('src','/week1/day1/prework/images/city.jpeg');
     }
 }
 
@@ -17,7 +17,7 @@ function setUserName() {
     if(!myName) {
         setUserName();
     } else {
-    localStorage.setItem('name', myName);
+        localStorage.setItem('name', myName);
     myHeading.textContent = 'Welcome to my page, ' + myName;
     }
 }
