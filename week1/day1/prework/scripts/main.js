@@ -3,7 +3,7 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === '/week1/day1/prework/images/city.jpeg') {
-        myImage.setAttribute('src','/digitalcrafts/week1/day1/prework/images/retreat-2020.jpg');
+        myImage.setAttribute('src','/week1/day1/prework/images/retreat-2020.jpg');
     } else {
         myImage.setAttribute('src','/week1/day1/prework/images/city.jpeg');
     }
