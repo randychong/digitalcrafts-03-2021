@@ -1,7 +1,7 @@
 # Variable
 # nameOfVariable = assignedValueToVariable
 # String === "", "word", "1", "functionName"
-greeting = "Hello World"
+greeting = "We going to the moon!"
 # Integer === whole number, 1, 23, 934234, 9392
 classSize = 23
 # Float === 4.5, 4.587867, etc.
@@ -23,3 +23,5 @@ variableName = True
 #{"FavoriteColor": "Red"}
 print("Hello World")
 print("Randy Chong, and I am in Houston")
+print(greeting)
+print(classSize)
