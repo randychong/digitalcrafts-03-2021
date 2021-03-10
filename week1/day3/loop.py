@@ -34,4 +34,4 @@ while(lengthOfFriendLastName < 1):
 
 print("Your friend's full name is %s %s" % (FriendFirstName, FriendLastName))
 
-print("%s %s is friends with %s %s" % (UserFirstName, UserLastName, FriendFirstName, FriendLastName))
+print("%s %s is friends with %s %s." % (UserFirstName, UserLastName, FriendFirstName, FriendLastName))
