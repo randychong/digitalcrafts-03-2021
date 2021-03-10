@@ -10,7 +10,7 @@ floatExample = 4.53
 sumOfNumbers = 1+1
 # Name, aassignement operator (=), value that I am assigning
 variableName = True
-# List, seqquence of values followed by [value1,value2, etc]
+# List, sequence of values followed by [value1,value2, etc]
 # [1, 2, 3]
 # ["string", "string2", "blahblahblah"]
 # [False, True, True]
@@ -22,6 +22,6 @@ variableName = True
 # {"stringName": "StringValue"}
 #{"FavoriteColor": "Red"}
 print("Hello World")
-print("Randy Chong, and I am in Houston")
+print("Randy Chong and I am in Houston")
 print(greeting)
 print(classSize)
