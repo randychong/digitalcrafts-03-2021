@@ -1,13 +1,16 @@
-firstNum = input("Please enter a number")
+num1 = int(input("Select a number"))
+op = input("Select an operator: (+, -, *, /")
+num2 = int(input("Select another number"))
 
-print("%s" % (firstNum))
+print(num1 + num2)
 
-Operator = input("Please select an operator (+, -, *, /)")
+# try:
+#     print(num1 + num2)
+# except ValueError:
+#     print("Please enter valid numbers")
 
-print("%s" % (Operator))
 
-secondNum = input("Please enter another number")
-
-add = firstNum + secondNum
-
-print("%s %s %s = %s" % (firstNum, Operator, secondNum, add))
+# print(int(num1) + int(num2))
+# print(int(num1) - int(num2))
+# print(int(num1) * int(num2))
+# print(int(num1) / int(num2))
