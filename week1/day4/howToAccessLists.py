@@ -9,6 +9,8 @@ dog = pets[0]
 # negative index will access starting at end of the list
 # demonSpawn = pets[-1]
 # print(demonSpawn)
+# result will be iguana
+
 # myFavoriteTwo = pets[0:2]
 # print(myFavoriteTwo)
 
