@@ -23,7 +23,7 @@ def quitApp():
     quitMessage = input("Would you like to quit? (y)yes (n) no\n")
     if quitMessage == "y":
         exit()
-    else:
+    elif quitMessage == "n":
         mainMenu()
 
 choice = input(mainMenu)
@@ -42,21 +42,23 @@ while len(choice) > 0:
         print("Here is your updated to-do list:")
         count = 1
         for task in dictionaryOfTasks:
-            print("%s: %s" % (title, priority))
+            print("%d: %s - %s" % (count, title, priority))
             count += 1
         quitApp()
     elif choice == "2":
         choice2 = input("Which task would you like to delete?\n")
         dictionaryOfTasks = {}
+        count = 1
         for task in dictionaryOfTasks:
-            print("%s: %s" % (title, priority))
+            print("%d: %s - %s" % (count, title, priority))
             count += 1
         quitApp()
     elif choice == "3":
+        dictionaryOfTasks = {}
         count = 1
-        for task in tasks:
-            print("%d: %s" % (count, task))
-            count +=1
+        for task in dictionaryOfTasks:
+            print("%d: %s - %s" % (count, title, priority))
+            count += 1
         quitApp()
     elif choice == "q":
         quitApp()
