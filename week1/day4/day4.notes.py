@@ -20,10 +20,10 @@
 string1 = input("Enter a word ")
 string2 = input("Enter another word ")
 
-def input1 (string1, string2):
+def input1 ():
     return print(string1 + string2)
 
-input1(string1, string2)
+input1()
 
 # SCOPE - what does the computer/program have access to
 # SCOPE is about having access to certain things in your program
