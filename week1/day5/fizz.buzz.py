@@ -71,7 +71,7 @@ for num in listOfNumbers:
 
 # make to empty values
 # can make a count
-# store what sequence
+# store sequence
 
 # make two variables with if
 # then make 3rd variable
@@ -99,7 +99,7 @@ for num in listOfNumbers:
 #     count += 1
 
 # Jorge's example
-for x i range(0, 100):
+for x in range(0, 100):
 
     x = x + 1
 
