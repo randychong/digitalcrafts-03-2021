@@ -1,10 +1,10 @@
-quitMessage = print("Press q at anytime to close the calculator.")
 num1 = int(input("Select a number: "))
 op = input("Select an operator: (+, -, *, /: ")
 num2 = int(input("Select another number: "))
-currentInput = num1, op, num2
-def closeCalc (q):
-    return exit()
+
+def quitMessage():
+    quitDecision = input("Would you like to quit? (y)Yes or (n)No" "\n")
+    return print("You are now exiting the calculator.")
 
 def add(num1, num2):
     add = (num1 + num2)
@@ -16,11 +16,11 @@ def subtract(num1, num2):
 
 def multiply(num1, num2):
     multiply = (num1 * num2)
-    return print (multiply)
+    return print(multiply)
 
 def divide(num1, num2):
     divide = (num1 / num2)
-    return print (divide)
+    return print(divide)
 
 if op == "+":
     add(num1, num2)
@@ -31,6 +31,10 @@ elif op == "*":
 elif op == "/":
     divide(num1, num2)
 
+quitMessage()
+
+if quitMessage == "y":
+    exit()
 
 
 
