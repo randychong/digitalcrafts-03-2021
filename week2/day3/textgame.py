@@ -15,7 +15,7 @@ class main_character:
         self.health -= self.damage_taken
 
     def character_stats(self):
-        print(f"Character Name: {self.name}\nAttack: {self.attack}\nHealth: {self.health}")
+        print(f"********************\nCharacter Name: {self.name}\nAttack: {self.attack}\nHealth: {self.health}\n********************")
 
 riven = main_character("Riven")
 
@@ -36,16 +36,16 @@ class final_boss:
         self.health -= self.damage_taken
 
     def character_stats(self):
-        print(f"Character Name: {self.name}\nAttack: {self.attack}\nHealth: {self.health}")
+        print(f"Character Name: {self.name}\nAttack: {self.attack}\nHealth: {self.health}\n********************")
 
 darius = final_boss("Darius")
 
 def battle():
     print(f"{riven.name} attacks {darius.name}!")
     darius.take_damage()
-    print(f"{darius.name} takes 10 damage.\n")
+    print(f"{darius.name} takes 10 damage.")
     print("Darius just smirks...")
-    print(f"{darius.name} has {darius.health} health remaining...")
+    print(f"{darius.name} has {darius.health} health remaining...\n********************")
 
 def victory():
     print("""********************\nRiven has slain Darius!!!
