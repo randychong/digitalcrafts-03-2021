@@ -50,15 +50,26 @@ def battle():
     print(f"{darius.name} has {darius.health} health remaining.")
     print("Darius just smirks at Riven...\n********************")
 
+def main_menu():
+    message = """
+    A wild Darius has appeared! What would you like to do?\n
+    1. Battle against Darius
+    2. Power Up
+    3. View Riven's stats
+    4. Retreat from battle
+    """
+    return print(message)
+
 def victory():
     print("""********************\nRiven has slain Darius!!!
     """)
 
-riven.character_stats()
-darius.character_stats()
-battle()
+# riven.character_stats()
+# darius.character_stats()
+# battle()
 
 while darius.health > 0:
+    main_menu()
     battle()
 if darius.health == 0:
     print("Darius finally collapses to the ground due to Riven's onslaught.")
