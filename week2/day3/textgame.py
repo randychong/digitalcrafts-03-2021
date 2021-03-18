@@ -55,8 +55,9 @@ def main_menu():
     A wild Darius has appeared! What would you like to do?\n
     1. Battle against Darius
     2. Power Up
-    3. View Riven's stats
-    4. Retreat from battle
+    3. Restore health
+    4. View Riven's stats
+    5. Retreat from battle
     """
     return print(message)
 
@@ -64,15 +65,30 @@ def victory():
     print("""********************\nRiven has slain Darius!!!
     """)
 
-# riven.character_stats()
-# darius.character_stats()
-# battle()
+def menu_select():
+    menu_choice = ""
+    if menu_choice == "1":
+        battle()
+    return menu_choice
 
-while darius.health > 0:
+choice = ""
+while choice != "5":
     main_menu()
-    battle()
-if darius.health == 0:
-    print("Darius finally collapses to the ground due to Riven's onslaught.")
-    victory()
+    menu_select()
+
+
+
+    # elif choice == "2":
+    #     power_up()
+    # elif choice == "3":
+    #     health_up()
+    # elif choice == "4":
+    #     character_stats()
+    # elif choice == "5":
+    #     print("Riven has retreated from battle...")
+    #     exit()
+    # elif darius.health == 0:
+    #     print("Darius finally collapses to the ground due to Riven's onslaught.")
+    #     victory()
 
 
