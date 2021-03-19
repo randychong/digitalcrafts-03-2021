@@ -4,16 +4,26 @@ class Main_character:
         self.health = health
         
     def heal_up(self):
-        self.health += 100
+        while self.health < 500:
+            self.health += 100
+            print(F"********************\n{riven.name} uses a potion to restore 100 health.")
+            return
+        else:
+            print(f"********************\n{riven.name} has too much health to use a potion!")
+            return
 
     def take_damage(self, damage):
         self.health -= damage
+        
 
     def view_stats(self):
         print(f"********************\nCharacter Name: {self.name}, the Exile\nAttack: 100\nHealth: {self.health}\n********************")
 
     def ultimate_ability(self):
-        print(f"{self.name} summons a massive sword glowing with blue energy and fires an energy wave at Darius dealing 9999 damage!!!")
+        print(f"""
+        Riven - "I can't lose...not like this...!!!"\n
+        Riven summons a massive sword glowing with blue energy and fires an energy wave at Darius dealing 9999 damage!!!
+        """)
         print("""
                            _
                           ( ((                                                   )>>))>>)                            
@@ -48,12 +58,12 @@ class Final_boss:
         self.health -= damage
 
     def view_stats(self):
-        print(f"Character Name: {self.name},the Hand of Noxus\nAttack: ???\nHealth: ???\n********************")
+        print(f"********************\nCharacter Name: {self.name},the Hand of Noxus\nAttack: ???\nHealth: ???\n********************")
 
 darius = Final_boss("Darius")
 
 def battle():
-    print(f"{riven.name} slashes {darius.name} with her blade!")
+    print(f"********************\n{riven.name} slashes {darius.name} with her blade!")
     riven.take_damage(200)
     darius.take_damage(100)
     print(f"{darius.name} takes 100 damage and has ??? health remaining.")
@@ -62,15 +72,15 @@ def battle():
 
 def dodge():
     darius.heal_up()
-    print(f"{riven.name} narrowly evades Darius' attack, however, Darius' recovers 999 health...")
+    print(f"********************\n{riven.name} narrowly evades Darius' attack, however, Darius' recovers 999 health...")
 
-def battle_result():
+def final_move():
     if riven.health <= 200:
         riven.ultimate_ability()
         exit()
 
 def main_menu():
-    battle_result()
+    final_move()
     message = int(input("""
     Darius is charging towards Riven! What do you do?\n
     1. Attack Darius with Riven's sword
@@ -89,7 +99,6 @@ def main_menu():
             main_menu()
         elif message == 3:
             riven.heal_up()
-            print(F"{riven.name} uses a potion to restore 100 health.")
             main_menu()
         elif message == 4:
             riven.view_stats()
@@ -98,10 +107,10 @@ def main_menu():
             print(f"{riven.name} now has {riven.health} health remaining...")
             main_menu()
         elif message == 5:
-            print("There is no surrendering...!!!")
+            print("********************\nThere is no surrendering...!!!")
             main_menu()
         else:
-            print("Please select a valid option.")
+            print("********************\nPlease select a valid option.")
             main_menu()
 
 print("""
