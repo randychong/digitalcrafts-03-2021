@@ -64,7 +64,13 @@ def dodge():
     darius.heal_up()
     print(f"{riven.name} narrowly evades Darius' attack, however, Darius' wounds begin to heal...")
 
+def battle_result():
+    if riven.health <= 200:
+        riven.ultimate_ability()
+        exit()
+
 def main_menu():
+    battle_result()
     message = int(input("""
     Darius is charging towards Riven! What do you do?\n
     1. Attack Darius with Riven's sword
@@ -93,7 +99,7 @@ def main_menu():
             main_menu()
         elif message == 5:
             print("There is no surrendering...!!!")
-            riven.ultimate_ability()
+            main_menu()
         else:
             print("Please select a valid option.")
             main_menu()
