@@ -85,7 +85,7 @@ def main_menu():
     Darius is charging towards Riven! What do you do?\n
     1. Attack Darius with Riven's sword
     2. Dodge the incoming attack
-    3. Restore some health
+    3. Use a potion
     4. Check on Riven's health
     5. Surrender
     """))
@@ -110,7 +110,8 @@ def main_menu():
             print("********************\nThere is no surrendering...!!!")
             main_menu()
         else:
-            print("********************\nPlease select a valid option.")
+            riven.take_damage(50)
+            print("********************\nRiven takes 50 damage due to 'user error'. Please select a valid menu option.")
             main_menu()
 
 print("""
