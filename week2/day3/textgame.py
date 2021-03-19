@@ -16,15 +16,15 @@ class Main_character:
         print(f"{self.name} summons a massive sword glowing with blue energy and fires an energy wave at Darius dealing 9999 damage!!!")
         print("""
                            _
-                          ( ((
-                           ) ))
-  .::.                    / /(
- 'M .-;-.-.-.-.-.-.-.-.-/| ((::::::::::::::::::::::::::::::::::::::::::::::.._
-(J ( ( ( ( ( ( ( ( ( ( ( |  ))   -====================================-      _.>
- `P `-;-`-`-`-`-`-`-`-`-\| ((::::::::::::::::::::::::::::::::::::::::::::::''
-  `::'                    \ \(
-                           ) ))
-                          (_((\n 
+                          ( ((                                                   )>>))>>)                            
+                           ) ))                                                     )>>))>>)
+  .::.                    / /(                                                          )>>))>>)         
+ 'R .-;-.-.-.-.-.-.-.-.-/| ((::::::::::::::::::::::::::::::::::::::::::::::.._             )>>))>>)
+(C ( ( ( ( ( ( ( ( ( ( ( |  ))   -====================================-      _.>          )>>))))>)>>
+ `3 `-;-`-`-`-`-`-`-`-`-\| ((::::::::::::::::::::::::::::::::::::::::::::::''              )>>))>>)
+  `::'                    \ \(                                                          )>>))>>)
+                           ) ))                                                     )>>))>>)
+                          (_((                                                   )>>))>>)\n
         Darius has 0 health remaining.
         *******************\n
         *******************\n\n
@@ -62,7 +62,7 @@ def battle():
 
 def dodge():
     darius.heal_up()
-    print(f"{riven.name} narrowly evades Darius' attack, however, Darius' wounds begin to heal...")
+    print(f"{riven.name} narrowly evades Darius' attack, however, Darius' recovers 999 health...")
 
 def battle_result():
     if riven.health <= 200:
@@ -89,7 +89,7 @@ def main_menu():
             main_menu()
         elif message == 3:
             riven.heal_up()
-            print(F"{riven.name} uses a potion to restore some health.")
+            print(F"{riven.name} uses a potion to restore 100 health.")
             main_menu()
         elif message == 4:
             riven.view_stats()
