@@ -12,6 +12,17 @@ class Main_character:
     def view_stats(self):
         print(f"********************\nCharacter Name: {self.name}, the Exile\nAttack: 100\nHealth: {self.health}\n********************")
 
+    def ultimate_ability(self):
+        print(f"{self.name} summons a massive sword glowing with blue energy and fires an energy wave at Darius dealing 9999 damage!!!")
+        print("""
+        *******************\n
+        *******************\n\n
+        Darius has 0 health remaining. Riven is victorious!!!\n\n
+        *******************\n
+        *******************
+        """)
+        exit()
+
 riven = Main_character("Riven")
 
 class Final_boss:
@@ -20,7 +31,7 @@ class Final_boss:
         self.health = health
         
     def heal_up(self):
-        self.health += 9999
+        self.health += 999
 
     def take_damage(self, damage):
         self.health -= damage
@@ -49,64 +60,34 @@ def main_menu():
     2. Dodge the incoming attack
     3. Restore some health
     4. Check on Riven's health
-    5. Retreat from battle
+    5. Surrender
     """))
     print(message)
     while message != "x":
         if message == 1:
             battle()
             main_menu()
-        if message == 2:
+        elif message == 2:
             dodge()
             main_menu()
-        if message == 5:
-            print("Riven retreats from battle!")
+        elif message == 3:
+            riven.heal_up()
+            print(F"{riven.name} uses a potion to restore some health.")
+            main_menu()
+        elif message == 4:
+            riven.view_stats()
+            print(f"{darius.name} launches a surprise attack and deals 300 damage!!!")
+            riven.take_damage(300)
+            print(f"{riven.name} now has {riven.health} health remaining...")
+            main_menu()
+        elif message == 5:
+            print("There is no surrendering...!!!")
+            riven.ultimate_ability()
             exit()
+        else:
+            print("Please select a valid option.")
+            main_menu()
 
 riven.view_stats()
 darius.view_stats()
 main_menu()
-
-        # if message == 2:
-        #     print("Riven narrowly evades Darius' attack!")
-        # if message == "1":
-        #     battle()
-        #     main_menu()
-        # if message == "1":
-        #     battle()
-        #     main_menu()
-        # if message == "1":
-        #     battle()
-        #     main_menu()
-
-def victory():
-    print("""********************\nRiven has slain Darius!!!
-    """)
-
-# def menu_select():
-#     menu_choice = ""
-#     if menu_choice == "1":
-#         battle()
-#     return menu_choice
-
-# choice = ""
-# while choice != "5":
-#     main_menu()
-#     menu_select()
-
-
-
-    # elif choice == "2":
-    #     power_up()
-    # elif choice == "3":
-    #     health_up()
-    # elif choice == "4":
-    #     view_stats()
-    # elif choice == "5":
-    #     print("Riven has retreated from battle...")
-    #     exit()
-    # elif darius.health == 0:
-    #     print("Darius finally collapses to the ground due to Riven's onslaught.")
-    #     victory()
-
-
