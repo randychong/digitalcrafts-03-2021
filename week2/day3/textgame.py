@@ -15,9 +15,20 @@ class Main_character:
     def ultimate_ability(self):
         print(f"{self.name} summons a massive sword glowing with blue energy and fires an energy wave at Darius dealing 9999 damage!!!")
         print("""
+                           _
+                          ( ((
+                           ) ))
+  .::.                    / /(
+ 'M .-;-.-.-.-.-.-.-.-.-/| ((::::::::::::::::::::::::::::::::::::::::::::::.._
+(J ( ( ( ( ( ( ( ( ( ( ( |  ))   -====================================-      _.>
+ `P `-;-`-`-`-`-`-`-`-`-\| ((::::::::::::::::::::::::::::::::::::::::::::::''
+  `::'                    \ \(
+                           ) ))
+                          (_((\n 
+        Darius has 0 health remaining.
         *******************\n
         *******************\n\n
-        Darius has 0 health remaining. Riven is victorious!!!\n\n
+        Riven is victorious!!!\n\n
         *******************\n
         *******************
         """)
@@ -83,11 +94,29 @@ def main_menu():
         elif message == 5:
             print("There is no surrendering...!!!")
             riven.ultimate_ability()
-            exit()
         else:
             print("Please select a valid option.")
             main_menu()
 
+print("""
+                 ___====-_  _-====___
+           _--^^^#####//      \\\#####^^^--_
+        _-^##########// (    ) \\\##########^-_
+       -############//  |\^^/|  \\\############-
+     _/############//   (@::@)   \\\############\_
+    /#############((     \\\//     ))#############\\
+   -###############\\\    (oo)    //###############-
+  -#################\\\  / VV \  //#################-
+ -###################\\\/      \//###################-
+_#/|##########/\######(   /\   )######/\##########|\#_
+|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+`  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
+   `   `  `      `   / | |  | | \   '      '  '   '
+                    (  | |  | |  )
+                   __\ | |  | | /__
+                  (vvv(VVV)(VVV)vvv)\n\n
+                  Riven vs Darius\n\n
+""")
 riven.view_stats()
 darius.view_stats()
 main_menu()
