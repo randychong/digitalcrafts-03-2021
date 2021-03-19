@@ -1,80 +1,88 @@
-class main_character:
-    def __init__(self, name, attack=50, health=100, damage_taken=20):
+class Main_character:
+    def __init__(self, name, health=1000):
         self.name = name
-        self.attack = attack
         self.health = health
-        self.damage_taken = damage_taken
-
-    def power_up(self):
-        self.attack += 10
         
-    def health_up(self):
-        self.health += 20
+    def heal_up(self):
+        self.health += 100
 
-    def take_damage(self):
-        self.health -= self.damage_taken
+    def take_damage(self, damage):
+        self.health -= damage
 
-    def character_stats(self):
-        print(f"********************\nCharacter Name: {self.name}, the Exile\nAttack: {self.attack}\nHealth: {self.health}\n********************")
+    def view_stats(self):
+        print(f"********************\nCharacter Name: {self.name}, the Exile\nAttack: 100\nHealth: {self.health}\n********************")
 
-riven = main_character("Riven")
+riven = Main_character("Riven")
 
-class final_boss:
-    def __init__(self, name, attack=20, health=200, damage_taken=50):
+class Final_boss:
+    def __init__(self, name, health=9999):
         self.name = name
-        self.attack = attack
         self.health = health
-        self.damage_taken = damage_taken
-
-    def power_up(self):
-        self.attack += 15
         
-    def health_up(self):
-        self.health += 50
+    def heal_up(self):
+        self.health += 9999
 
-    def take_damage(self):
-        self.health -= self.damage_taken
+    def take_damage(self, damage):
+        self.health -= damage
 
-    def character_stats(self):
-        print(f"Character Name: {self.name},the Hand of Noxus\nAttack: {self.attack}\nHealth: {self.health}\n********************")
+    def view_stats(self):
+        print(f"Character Name: {self.name},the Hand of Noxus\nAttack: ???\nHealth: ???\n********************")
 
-darius = final_boss("Darius")
+darius = Final_boss("Darius")
 
 def battle():
-    print(f"{riven.name} battles {darius.name}!")
-    riven.take_damage()
-    darius.take_damage()
-    print(f"{riven.name} takes 20 damage.")
-    print(f"{darius.name} takes 50 damage.")
-    print(f"{riven.name} has {riven.health} health remaining.")
-    print(f"{darius.name} has {darius.health} health remaining.")
+    print(f"{riven.name} attacks {darius.name}!")
+    riven.take_damage(200)
+    darius.take_damage(100)
+    print(f"{darius.name} takes 100 damage and has ??? health remaining.")
+    print(f"{darius.name} swings his axe menacingly at Riven!")
+    print(f"{riven.name} takes 200 damage and has {riven.health} health remaining.")
     print("Darius just smirks at Riven...\n********************")
 
 def main_menu():
-    message = """
-    A wild Darius has appeared! What would you like to do?\n
-    1. Battle against Darius
-    2. Power Up
-    3. Restore health
-    4. View Riven's stats
+    message = int(input("""
+    Darius is charging towards Riven! What do you do?\n
+    1. Attack Darius with Riven's sword
+    2. Dodge the incoming attack
+    3. Restore some health
+    4. Check on Riven's health
     5. Retreat from battle
-    """
+    """))
     return print(message)
+    # while message != 5:
+    #     if message == 1:
+    #         battle()
+    #         main_menu()
+        # if message == 2:
+        #     print("Riven narrowly evades Darius' attack!")
+        # if message == "1":
+        #     battle()
+        #     main_menu()
+        # if message == "1":
+        #     battle()
+        #     main_menu()
+        # if message == "1":
+        #     battle()
+        #     main_menu()
 
 def victory():
     print("""********************\nRiven has slain Darius!!!
     """)
 
-def menu_select():
-    menu_choice = ""
-    if menu_choice == "1":
-        battle()
-    return menu_choice
+riven.view_stats()
+darius.view_stats()
+main_menu()
 
-choice = ""
-while choice != "5":
-    main_menu()
-    menu_select()
+# def menu_select():
+#     menu_choice = ""
+#     if menu_choice == "1":
+#         battle()
+#     return menu_choice
+
+# choice = ""
+# while choice != "5":
+#     main_menu()
+#     menu_select()
 
 
 
@@ -83,7 +91,7 @@ while choice != "5":
     # elif choice == "3":
     #     health_up()
     # elif choice == "4":
-    #     character_stats()
+    #     view_stats()
     # elif choice == "5":
     #     print("Riven has retreated from battle...")
     #     exit()
