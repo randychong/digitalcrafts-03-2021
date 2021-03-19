@@ -93,8 +93,8 @@ def main_menu():
             main_menu()
         elif message == 4:
             riven.view_stats()
-            print(f"{darius.name} launches a surprise attack and deals 300 damage!!!")
-            riven.take_damage(300)
+            print(f"{darius.name} launches a surprise attack and deals 400 damage!!!")
+            riven.take_damage(400)
             print(f"{riven.name} now has {riven.health} health remaining...")
             main_menu()
         elif message == 5:
