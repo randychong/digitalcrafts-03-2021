@@ -31,13 +31,16 @@ class Final_boss:
 darius = Final_boss("Darius")
 
 def battle():
-    print(f"{riven.name} attacks {darius.name}!")
+    print(f"{riven.name} slashes {darius.name} with her blade!")
     riven.take_damage(200)
     darius.take_damage(100)
     print(f"{darius.name} takes 100 damage and has ??? health remaining.")
-    print(f"{darius.name} swings his axe menacingly at Riven!")
-    print(f"{riven.name} takes 200 damage and has {riven.health} health remaining.")
+    print(f"{darius.name} swings his axe menacingly at {riven.name} dealing 200 damage!")
     print("Darius just smirks at Riven...\n********************")
+
+def dodge():
+    darius.heal_up()
+    print(f"{riven.name} narrowly evades Darius' attack, however, Darius' wounds begin to heal...")
 
 def main_menu():
     message = int(input("""
@@ -48,11 +51,22 @@ def main_menu():
     4. Check on Riven's health
     5. Retreat from battle
     """))
-    return print(message)
-    # while message != 5:
-    #     if message == 1:
-    #         battle()
-    #         main_menu()
+    print(message)
+    while message != "x":
+        if message == 1:
+            battle()
+            main_menu()
+        if message == 2:
+            dodge()
+            main_menu()
+        if message == 5:
+            print("Riven retreats from battle!")
+            exit()
+
+riven.view_stats()
+darius.view_stats()
+main_menu()
+
         # if message == 2:
         #     print("Riven narrowly evades Darius' attack!")
         # if message == "1":
@@ -68,10 +82,6 @@ def main_menu():
 def victory():
     print("""********************\nRiven has slain Darius!!!
     """)
-
-riven.view_stats()
-darius.view_stats()
-main_menu()
 
 # def menu_select():
 #     menu_choice = ""
