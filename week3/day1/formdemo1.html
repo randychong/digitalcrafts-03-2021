@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form Practice</title>
+</head>
+<body>
+    <form name="user-information">
+        <fieldset>
+            <p>
+                <legend>User Information</legend>
+            </p>
+            <p>
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name">
+            </p>
+        </fieldset>
+    </form>
+    <form name="favorite-food">
+        <fieldset>
+            <legend>Favorite Foods</legend>
+            <p>
+                <label for="burger">Burgers (In-and-Out or Whataburger? How bout both?)</label>
+                <input type="radio" name="question" id="burgers" value="no" checked>  
+            </p>
+            <p>
+                <label for="wings">Wings (Mango Habanero)</label>
+                <input type="radio" name="question" id="wings" value="yes">
+            </p>
+            <p>
+                <label for="fries">Fries (Curly or Waffle Fries?)</label>
+                <input type="radio" name="question" id="fries">
+            </p>
+            <p>
+                <label for="ramen">Ramen (gimme that Spicy Tonkotsu Ramen with extra chashu)</label>
+                <input type="radio" name="question" id="ramen">
+            </p>
+            <p>
+                <label for="steak">Steak (a nice, juicy medium rare Prime Rib or Ribeye, les go)</label>
+                <input type="radio" name="question" id="steak">
+            </p>
+            <p>
+                <label for="taco">Tacos (brisket, bacon, and eggs oh boi)</label>
+                <input type="radio" name="question" id="taco">
+            </p>
+            <p>
+                <label for="donuts">Donuts (how bout some of that Krispy Kreme Glazed Donuts eh?)</label>
+                <input type="radio" name="question" id="donut">
+            </p>
+            <p>
+                <label for="icecream">Ice Cream (banana float or maybe a Kit-Kat Icecream Bar? So hard to choose)</label>
+                <input type="radio" name="question" id="icecream">
+            </p>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Favorite Drinks</legend>
+            <p>
+                <label for="favorite-drinks">What's your favorite drink?</label>
+                <select name="drinks" id="favorite-drinks">
+                    <option value="" disabled selected>Please choose only one!</option>
+                    <option value="water">Water (gotta stay hydrated)</option>
+                    <option value="tea">Sweet Tea (southern sweet)</option>
+                    <option value="coffee">Coffee (extra espresso please)</option>
+                    <option value="smoothie">Fresh Fruit Smoothie (strawberries and bananas)</option>
+                    <option value="beer">Beer (Corona)</option>
+                </select>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
