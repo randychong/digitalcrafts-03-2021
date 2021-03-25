@@ -1,0 +1,120 @@
+.main-container {
+  display: grid;
+  grid-template-areas:
+    "nav main sidebar"
+    "content1 content2 footer";
+  grid-template-rows: 60px 60px;
+  grid-template-columns: 120px 120px 120px;
+  gap: 5px;
+}
+
+nav {
+  grid-area: nav;
+  background-color: powderblue;
+}
+
+main {
+  grid-area: main;
+  background-color: powderblue;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background-color: powderblue;
+}
+
+#content1 {
+  grid-area: content1;
+  background-color: powderblue;
+}
+
+#content2 {
+  grid-area: content2;
+  background-color: powderblue;
+}
+
+footer {
+  grid-area: footer;
+  background-color: powderblue;
+}
+
+.second-container {
+  display: grid;
+  grid-template-columns: 40px 40px;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-areas:
+    "content3 content4"
+    "content5 content6"
+    "content7 content8"
+    "content9 content10"
+    "content11 content12";
+}
+
+#content3 {
+  grid-area: content3;
+  background-color: turquoise;
+}
+#content4 {
+  grid-area: content4;
+  background-color: turquoise;
+}
+#content5 {
+  grid-area: content5;
+  background-color: turquoise;
+}
+#content6 {
+  grid-area: content6;
+  background-color: turquoise;
+}
+#content7 {
+  grid-area: content7;
+  background-color: turquoise;
+}
+#content8 {
+  grid-area: content8;
+  background-color: turquoise;
+}
+#content9 {
+  grid-area: content9;
+  background-color: turquoise;
+}
+#content10 {
+  grid-area: content10;
+  background-color: turquoise;
+}
+#content11 {
+  grid-area: content11;
+  background-color: turquoise;
+}
+#content12 {
+  grid-area: content12;
+  background-color: turquoise;
+}
+
+.holy-grail {
+  display: grid;
+  grid-template-rows: 20px 200px 30px;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-areas:
+    "holy-nav holy-nav holy-nav"
+    "holy-sidebar holy-content holy-content"
+    "holy-footer holy-footer holy-footer";
+  gap: 2px;
+}
+
+#holy-nav {
+  grid-area: holy-nav;
+  background-color: teal;
+}
+#holy-sidebar {
+  grid-area: holy-sidebar;
+  background-color: teal;
+}
+#holy-content {
+  grid-area: holy-content;
+  background-color: teal;
+}
+#holy-footer {
+  grid-area: holy-footer;
+  background-color: teal;
+}
