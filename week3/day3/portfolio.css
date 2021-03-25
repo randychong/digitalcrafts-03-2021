@@ -1,6 +1,7 @@
 .page-header {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   flex-direction: column;
   align-items: center;
 }
@@ -12,20 +13,8 @@
 .background-image {
   display: flex;
   opacity: 0.8;
-  justify-content: center;
   margin-top: 10px;
-}
-
-#about-header {
-  display: flex;
   justify-content: center;
-}
-
-#about-body {
-  display: flex;
-  justify-content: center;
-  text-align: left;
-  padding: 10px;
 }
 
 .about-randy {
@@ -35,4 +24,25 @@
   border-style: solid;
   border-width: 1px;
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+}
+
+#about-header {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#about-body {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
