@@ -1,0 +1,68 @@
+:root {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+.navbar {
+  text-decoration: none;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-left: 15rem;
+}
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 200ms ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-text {
+  color: white;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 6rem;
+  text-decoration: none;
+  min-width: 2rem;
+  margin: 1rem 1.5rem;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.navbar:hover {
+  width: 10rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
