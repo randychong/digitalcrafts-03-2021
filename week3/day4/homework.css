@@ -1,0 +1,111 @@
+.nav-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+body {
+  color: black;
+  background-color: rgb(237, 241, 241);
+  margin: 0;
+  padding: 0;
+}
+
+.body-content {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: (5, 5rem);
+  grid-template-rows: (5, 5rem);
+  grid-template-areas:
+    "profile header header header header"
+    "sidebar content content content content"
+    "sidebar content content content content"
+    "sidebar image image image image"
+    "footer footer footer footer footer";
+}
+
+.header-div {
+  grid-area: header;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+}
+
+.profile-picture {
+  height: 10rem;
+  width: 10rem;
+  grid-area: profile;
+  border-radius: 100px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.navbar-div {
+  grid-area: sidebar;
+}
+
+.main-content {
+  grid-area: content;
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+  height: 5rem;
+  width: 40rem;
+  padding: 1rem;
+  background-color: #dad6d6;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.background-picture {
+  grid-area: image;
+  margin-left: 5rem;
+  height: 450px;
+  width: 670px;
+  border-radius: 10px;
+}
+
+.footer-text {
+  grid-area: footer;
+}
+
+.nav-item {
+  display: flex;
+  height: 4rem;
+  min-width: 2rem;
+  margin: 1rem -1rem;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.navbar {
+  background: #dad6d6;
+  width: 5rem;
+  height: 70vh;
+  padding: 0.25rem;
+  transition: 200ms ease;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar:hover {
+  width: 10rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+footer {
+  background-color: #dad6d6;
+  text-align: right;
+  padding-top: 1rem;
+  padding-right: 0.5rem;
+  font-family: "Nunito", sans-serif;
+  height: 2.5rem;
+}
