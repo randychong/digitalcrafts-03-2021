@@ -29,19 +29,19 @@
 
 operand = "multiply", "divide", "subtract", "add";
 function calculate(operand, num1, num2) {
-    if (operand == "multiply"){
+    if (operand == "multiply") {
         console.log(num1 * num2)
     }
 
-    else if (operand == "divide"){
+    else if (operand == "divide") {
         console.log(num1 / num2)
     }
 
-    else if (operand == "subtract"){
+    else if (operand == "subtract") {
         console.log(num1 - num2)
     }
 
-    else if (operand == "add"){
+    else if (operand == "add") {
         console.log(num1 + num2)
     }
 }
