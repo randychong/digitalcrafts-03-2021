@@ -5,10 +5,10 @@ console.log(snack)
 console.log(food)
 console.log(store)
 
-let array1 = ["seaweed", "musubi", "H-mart"]
+let array1 = ["juicy spicy fried chicken", " 24oz medium-rare ribeye", "cinnamon vanilla ice cream cake"]
 console.log(array1)
 
-let drink = "water"
+let drink = "mojito"
 console.log(drink)
 
 let number = 3
@@ -30,7 +30,7 @@ let batman = {name:"Batman", age:20, height:"7.1", metric: "ft"}
 console.log(batman)
 
 let chuck = {name:"Chuck Norris", age:35, height:"9.9"}
-let bruce = {name:"Bruce Lee", age:33, height:"7.5"}
+let bruce = {name:"Bruce Lee", age:100, height:"6.9"}
 let goku = {name:"Goku", age:"ageless", height:"over 9000"}
 let mary = {name:"Mary Poppins", age:"??", height:"too high"}
 let mom = {name:"My mom", age:"none-ya-business", height:"also-none-ya-business"}
