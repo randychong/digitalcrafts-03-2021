@@ -16,7 +16,15 @@ let singlePizza = {
     },
 }
 
-for(const pizza in singlePizza){
-    console.log(singlePizza[pizza]);
+// for(const pizza in singlePizza){
+//     console.log(pizza);
+//     console.log(singlePizza[pizza]);
+//     console.log(singlePizza.firstPizza.toppings);
+// }
+
+for (const topping of singlePizza.toppings) {
+    console.log(topping);
 }
+
 //for of is for arrays
+let cars = ["Subaru", "Audi", "Honda", "BMW"]
