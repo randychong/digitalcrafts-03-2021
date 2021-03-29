@@ -1,22 +1,22 @@
 const dantesHashOfInferno = {
     level1: {
-      name: Limbo,
+      name: "Limbo",
       contents: [1, 2, 3, 4, 5, 6, 7, 89, 9, 57, 345, 2, 4123, 4423, 4, 234, 24],
     },
     level2: {
-      name: Lust,
+      name: "Lust",
       contents: [12, [56, 56, 56], "swag"],
     },
     level3: {
-      name: Gluttony,
+      name: "Gluttony",
       contents: [{ volume: 92, sanctum: "lorem ipsum", tower: ["crown"] }],
     },
     level4: {
-      name: Greed,
+      name: "Greed",
       contents: [{ fourth: "fourth", number4: 4 }],
     },
     level5: {
-      name: Anger,
+      name: "Anger",
       contents: [
         {
           reee: 92,
@@ -26,19 +26,19 @@ const dantesHashOfInferno = {
       ],
     },
     level6: {
-      name: Heresy,
+      name: "Heresy",
       contents: [],
     },
     level7: {
-      name: Violence,
+      name: "Violence",
       contents: [],
     },
     level8: {
-      name: Fraud,
+      name: "Fraud",
       contents: [],
     },
     level9: {
-      name: Treachery,
+      name: "Treachery",
       contents: [
         {
           volume: 92,
@@ -62,3 +62,10 @@ const dantesHashOfInferno = {
       ],
     },
   };
+
+  console.log(dantesHashOfInferno.level1.contents[15])
+  console.log(dantesHashOfInferno.level3.contents.tower)
+//   console.log(dantesHashOfInferno.level5.contents)
+//   console.log(dantesHashOfInferno.level9.contents)
+
+  
