@@ -26,3 +26,28 @@
 // }
 
 // divide (1, 2)
+
+operand = "multiply", "divide", "subtract", "add";
+function calculate(operand, num1, num2) {
+    if (operand == "multiply"){
+        console.log(num1 * num2)
+    }
+
+    else if (operand == "divide"){
+        console.log(num1 / num2)
+    }
+
+    else if (operand == "subtract"){
+        console.log(num1 - num2)
+    }
+
+    else if (operand == "add"){
+        console.log(num1 + num2)
+    }
+}
+;
+
+calculate("multiply", 10, 5)
+calculate("divide", 10, 5)
+calculate("subtract", 10, 5)
+calculate("add", 10, 5)
