@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const newDiv = document.createElement("div")
+    console.log(newDiv)
+    newDiv.className = "main-container"
+
+    const list = document.createElement("ul")
+    console.log(list)
+
+    const listItem1 = document.createElement("li")
+    const listItem2 = document.createElement("li")
+    const listItem3 = document.createElement("li")
+    const listItem4 = document.createElement("li")
+    const listItem5 = document.createElement("li")
+
+    list.append(listItem1, listItem2, listItem3, listItem4, listItem5)
+
+    const input = document.createElement("input")
+    input.setAttribute("type", "text")
+    console.log(input)
+
+    const radio = document.createElement("input")
+    radio.setAttribute("type", "radio")
+    console.log(radio)
+
+    newDiv.append(list, input, radio)
+    console.log(newDiv)
+    
+</script>
+</html>
