@@ -8,6 +8,43 @@
     <link rel="stylesheet" href="tipcalc.css">
 </head>
 <body>
-    
+    <div class="mainDiv">
+        <h1 class="mainHeader">Randy's Tip Calculator</h1>
+            <div class="div1">
+                <h3 class="billHeader">Bill Amount</h3>
+                <input class="billClass" type="number" placeholder="20.00">
+            </div class="div1">
+        
+            <div class="div2">
+                <h3 class='tipHeader'>Tip Amount</h3>
+                <input class="tipClass" type="number" placeholder="5.00">
+            </div>
+
+            <div class="div3">
+                <button onclick="calculateTip()" type="button">Calculate Total</button>
+            </div>
+
+            <div class="div4">
+                <h3 class='totalHeader'>Total Amount</h3>
+                <p class="totalAmount"></p>
+            </div>
+    </div>
 </body>
+<script>
+    function calculateTip (){
+        let billAmount = document.querySelector(".billClass").value
+        let tipPercentage = document.querySelector(".tipClass").value
+        let total = document.querySelector(".totalAmount")
+        
+        billAmount = Number(billAmount)
+        tipPercentage = Number(tipPercentage) / 100
+        tipAmount = billAmount * tipPercentage
+
+        function addAmount(){
+            finalAmount = billAmount + tipAmount
+            total.innerHTML = finalAmount
+        }
+        addAmount()
+    }
+</script>
 </html>
