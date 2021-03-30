@@ -64,8 +64,8 @@ const dantesHashOfInferno = {
   };
 
   console.log(dantesHashOfInferno.level1.contents[15])
-  console.log(dantesHashOfInferno.level3.contents.tower)
-//   console.log(dantesHashOfInferno.level5.contents)
-//   console.log(dantesHashOfInferno.level9.contents)
+  console.log(dantesHashOfInferno.level3.contents[0].tower)
+  console.log(dantesHashOfInferno.level5.contents[0].reeeeeee[1].anger)
+  console.log(dantesHashOfInferno.level9.contents[0].tower[0].reeeeeee[1].secret[0].theSecretIs)
 
   
