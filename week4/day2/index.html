@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-header">Dom 101</h1>    
+    <ul id="list">
+        <li class="list-item">User</li>
+        <li class="list-item">About</li>
+        <li class="list-item">Contact</li>
+        <li class="list-item1">Chat</li>
+    </ul>
+</body>
+<script>
+    const heading = document.getElementById("main-header")
+   
+    heading.innerText = "He is how old?"
+    
+    heading.style.color = "pink"
+
+    const newListItem = document.creatElement("li")
+    newListItem.innerText = "Returns"
+
+    const list = document.getElementById("list")
+    console.log(list)
+    list.append(newListItem)   
+
+    console.log(newListItem)
+
+    // const list = document.getElementById("list")
+    // console.log(list)
+
+    // const listItem = document.getElementsByClassName("list-item")
+    // console.log(listItem)
+
+    // const liItems = documents.getElementsByTagName("li")
+    // console.log(liItems)
+
+    // const lastListItem = document.querySelectorAll(".list-item1")
+    // console.log(lastListItem)
+
+    // const holder = lastListItem
+    // console.log(holder)
+</script>
+</html>
