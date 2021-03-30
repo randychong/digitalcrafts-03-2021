@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="root">
     
 </body>
 <script>
+    const root = document.querySelector("#root")
+
     const newDiv = document.createElement("div")
-    console.log(newDiv)
     newDiv.className = "main-container"
 
     const list = document.createElement("ul")
-    console.log(list)
 
     const listItem1 = document.createElement("li")
     const listItem2 = document.createElement("li")
@@ -27,14 +27,13 @@
 
     const input = document.createElement("input")
     input.setAttribute("type", "text")
-    console.log(input)
 
     const radio = document.createElement("input")
     radio.setAttribute("type", "radio")
-    console.log(radio)
 
     newDiv.append(list, input, radio)
     console.log(newDiv)
-    
+
+    root.append(newDiv)
 </script>
 </html>
