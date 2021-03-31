@@ -51,8 +51,7 @@
 
         function addAmount(){
             finalAmount = billAmount + tipAmount
-            total.innerHTML = finalAmount
-            finalAmount = "$" + finalAmount
+            total.innerHTML = finalAmount.toFixed(2)
         }
         addAmount()
     }
