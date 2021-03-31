@@ -6,28 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="tipcalc.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mainDiv">
-        <h1 class="mainHeader">Randy's Tip Calculator</h1>
-            <div class="div1">
-                <h3 class="billHeader">Bill Amount</h3>
-                <input class="billClass" type="number" placeholder="20.00">
-            </div class="div1">
-        
-            <div class="div2">
-                <h3 class='tipHeader'>Tip Amount</h3>
-                <input class="tipClass" type="number" placeholder="5.00">
-            </div>
-
-            <div class="div3">
-                <button onclick="calculateTip()" type="button">Calculate Total</button>
-            </div>
-
-            <div class="div4">
-                <h3 class='totalHeader'>Total Amount</h3>
-                <p class="totalAmount"></p>
-            </div>
+    <div class="main-container">
+        <div class="child-container">
+            <h1 class="main-header">Tip Calculator</h1>
+                <div class="div1">
+                    <h3 class="sub-header">Bill Amount</h3>
+                    <span>$
+                        <input class="billClass" type="text" placeholder="ie. 30.00">
+                    </span>
+                </div class="div1">
+            
+                <div class="div2">
+                    <h3 class='sub-header'>Tip Percentage</h3>
+                    <span>%
+                        <input class="tipClass" type="text" placeholder="ie. 15">
+                    </span>
+                </div>
+    
+                <div class="div3">
+                    <button onclick="calculateTip()" class="button" type="button">Calculate Total</button>
+                </div>
+    
+                <div class="div4">
+                    <h3 class='sub-header'>Total Amount</h3>
+                            <p class="totalAmount">$0.00</p>  
+                </div>
+        </div>
     </div>
 </body>
 <script>
@@ -43,6 +51,7 @@
         function addAmount(){
             finalAmount = billAmount + tipAmount
             total.innerHTML = finalAmount
+            finalAmount = "$" + finalAmount
         }
         addAmount()
     }
