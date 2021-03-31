@@ -18,6 +18,8 @@
   width: 25rem;
   border-style: solid;
   border-color: white;
+  border-radius: 5px;
+  border-width: 1px;
 }
 
 .billClass {
@@ -41,7 +43,7 @@
 }
 
 .button {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border-radius: 5rem;
   outline: none;
   font-family: "Nunito", sans-serif;
@@ -49,6 +51,8 @@
   border-style: solid;
   border-width: 1px;
   background-color: white;
+  height: 1.5rem;
+  width: 8rem;
 }
 
 .main-header {
@@ -72,4 +76,8 @@ body {
 
 .button:hover {
   opacity: 80%;
+}
+
+footer {
+  text-align: right;
 }
