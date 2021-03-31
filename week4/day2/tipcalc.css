@@ -12,14 +12,10 @@
   flex-direction: column;
   align-items: center;
   margin: auto auto;
-  background: #d9a7c7;
-  background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
-  background: linear-gradient(to right, #fffcdc, #d9a7c7);
+  background: white;
   width: 25rem;
-  border-style: solid;
-  border-color: white;
   border-radius: 5px;
-  border-width: 1px;
+  shadow
 }
 
 .billClass {
