@@ -13,23 +13,21 @@
     <div class="main-container">
         <div class="child-container">
             <h1 class="main-header">Tip Calculator</h1>
+            <form return false>
                 <div class="div1">
                     <h3 class="sub-header">Bill Amount ($)</h3>
-                    <span>
-                        <input class="billClass" type="text" placeholder="ie. 30.00">
-                    </span>
+                        <input class="billClass" id="amount1" type="text" placeholder="ie. 30.00">
                 </div class="div1">
-            
+
                 <div class="div2">
                     <h3 class='sub-header'>Tip Percentage (%)</h3>
-                    <span>
-                        <input class="tipClass" type="text" placeholder="ie. 15">
-                    </span>
+                        <input class="tipClass" id="amount2" type="text" placeholder="ie. 15">
                 </div>
     
                 <div class="div3">
-                    <button onclick="calculateTip()" class="button" type="button">Calculate Total</button>
+                    <button onclick="calculateTip()" class="button" type="submit">Calculate Total</button>
                 </div>
+            </form>
     
                 <div class="div4">
                     <h3 class='sub-header'>Total Amount ($)</h3>
@@ -61,6 +59,29 @@
         listItem.innerText = tipAmount.toFixed(2)
         grabList.append(listItem)
         
+        const form = document.querySelector("form")
+    
+        const validateNumber = (number) => {
+            myRegex = /^-?\d+\.?\d*$/
+            return myRegex.test(number)
+        }
+    
+        form.addEventListener("submit", (event) => {
+            const bill = document.querySelector("#amount1")
+            if (!validateNumber(bill.value)) {
+                event.preventDefault()
+                alert("Please enter in numbers only")
+            }
+        })
+
+        form.addEventListener("submit", (event) => {
+            const bill = document.querySelector("#amount2")
+            if (!validateNumber(bill.value)) {
+                event.preventDefault()
+                alert("Please enter in numbers only")
+            }
+        })
     }
+
 </script>
 </html>
