@@ -14,15 +14,15 @@
         <div class="child-container">
             <h1 class="main-header">Tip Calculator</h1>
                 <div class="div1">
-                    <h3 class="sub-header">Bill Amount</h3>
-                    <span>$
+                    <h3 class="sub-header">Bill Amount ($)</h3>
+                    <span>
                         <input class="billClass" type="text" placeholder="ie. 30.00">
                     </span>
                 </div class="div1">
             
                 <div class="div2">
-                    <h3 class='sub-header'>Tip Percentage</h3>
-                    <span>%
+                    <h3 class='sub-header'>Tip Percentage (%)</h3>
+                    <span>
                         <input class="tipClass" type="text" placeholder="ie. 15">
                     </span>
                 </div>
@@ -32,8 +32,13 @@
                 </div>
     
                 <div class="div4">
-                    <h3 class='sub-header'>Total Amount</h3>
-                            <p class="totalAmount">$0.00</p>  
+                    <h3 class='sub-header'>Total Amount ($)</h3>
+                            <p class="totalAmount">0.00</p>  
+                </div>
+
+                <div class="div5">
+                    <h3 class='sub-header'>Tip Amounts ($)</h3>
+                    <ul class="tip-list"></ul>
                 </div>
         </div>
     </div>
@@ -48,12 +53,14 @@
         billAmount = Number(billAmount)
         tipPercentage = Number(tipPercentage) / 100
         tipAmount = billAmount * tipPercentage
+        finalAmount = billAmount + tipAmount
+        total.innerHTML = finalAmount.toFixed(2)
 
-        function addAmount(){
-            finalAmount = billAmount + tipAmount
-            total.innerHTML = finalAmount.toFixed(2)
-        }
-        addAmount()
+        let grabList = document.querySelector('.tip-list')
+        let listItem = document.createElement('li')
+        listItem.innerText = tipAmount.toFixed(2)
+        grabList.append(listItem)
+        
     }
 </script>
 </html>

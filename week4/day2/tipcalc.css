@@ -15,7 +15,6 @@
   background: white;
   width: 25rem;
   border-radius: 5px;
-  shadow
 }
 
 .billClass {
@@ -76,4 +75,10 @@ body {
 
 footer {
   text-align: right;
+}
+
+.tip-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
