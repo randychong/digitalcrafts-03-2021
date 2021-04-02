@@ -13,7 +13,7 @@
     <div class="main-container">
         <div class="child-container">
             <h1 class="main-header">Tip Calculator</h1>
-            <form return false>
+            <form action="#"; return false>
                 <div class="div1">
                     <h3 class="sub-header">Bill Amount ($)</h3>
                         <input class="billClass" id="amount1" type="text" placeholder="ie. 30.00">
@@ -43,45 +43,47 @@
     <footer>Created by Randy Chong</footer>
 </body>
 <script>
-    function calculateTip (){
-        let billAmount = document.querySelector(".billClass").value
-        let tipPercentage = document.querySelector(".tipClass").value
-        let total = document.querySelector(".totalAmount")
+    function calculateTip () {
+        let billAmount = document.querySelector(".billClass").value;
+        let tipPercentage = document.querySelector(".tipClass").value;
+        let total = document.querySelector(".totalAmount");
         
-        billAmount = Number(billAmount)
-        tipPercentage = Number(tipPercentage) / 100
-        tipAmount = billAmount * tipPercentage
-        finalAmount = billAmount + tipAmount
-        total.innerHTML = finalAmount.toFixed(2)
-
-        let grabList = document.querySelector('.tip-list')
-        let listItem = document.createElement('li')
-        listItem.innerText = tipAmount.toFixed(2)
-        grabList.append(listItem)
+        billAmount = Number(billAmount);
+        tipPercentage = Number(tipPercentage) / 100;
+        tipAmount = billAmount * tipPercentage;
+        finalAmount = billAmount + tipAmount;
+        total.innerHTML = finalAmount.toFixed(2);
+        };
         
-        const form = document.querySelector("form")
+        let grabList = document.querySelector('.tip-list');
+        let listItem = document.createElement('li');
+        listItem.innerText = tipAmount.toFixed(2);
+        grabList.append(listItem);
+        
+        const form = document.querySelector("form");
     
         const validateNumber = (number) => {
-            myRegex = /^-?\d+\.?\d*$/
-            return myRegex.test(number)
-        }
+            myRegex = /^-?\d+\.?\d*$/;
+            return myRegex.test(number);
+        };
     
         form.addEventListener("submit", (event) => {
-            const bill = document.querySelector("#amount1")
-            if (!validateNumber(bill.value)) {
+            const bill1 = document.querySelector("#amount1");
+
+            if (!validateNumber(bill1.value)) {
                 event.preventDefault()
-                alert("Please enter in numbers only")
+                alert("Please enter in numbers only");
             }
-        })
+        });
 
         form.addEventListener("submit", (event) => {
-            const bill = document.querySelector("#amount2")
-            if (!validateNumber(bill.value)) {
+            const bill2 = document.querySelector("#amount2");
+
+            if (!validateNumber(bill2.value)) {
                 event.preventDefault()
-                alert("Please enter in numbers only")
+                alert("Please enter in numbers only");
             }
-        })
-    }
+        });
 
 </script>
 </html>
