@@ -1,48 +1,87 @@
 body {
-  background-image: url(https://bit.ly/3mji4VI);
+  display: grid;
+  place-items: center;
+  /* background: #2980b9;
+  background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9); */
+  font-family: "Nunito", sans-serif;
+  background-image: url("https://unsplash.com/photos/B6hw9ooyldM");
 }
 
+h3 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+}
 .main-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: 3rem repeat(4, 10rem);
   grid-template-areas:
+    "zip button clear"
     "location location location"
     "temp temp temp"
     "temp temp temp"
     "maxTemp minTemp humidity"
     "footer footer footer";
+  width: 30rem;
+}
+
+.zip {
+  grid-area: zip;
+  width: 8rem;
+  height: 2rem;
+  outline: none;
+  border-radius: 5rem;
+  border-width: 1px;
+  padding-left: 1rem;
+  background: white;
+}
+
+.button {
+  grid-area: button;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 5rem;
+  border-width: 1px;
+  background: white;
+  outline: none;
+}
+
+.button:hover {
+  background: rgb(246, 243, 243);
+}
+
+.clear {
+  grid-area: clear;
+  height: 2rem;
+  width: 4rem;
 }
 
 .city {
   grid-area: location;
-  background-color: white;
-  opacity: 50%;
 }
 
 .temp {
   grid-area: temp;
-  background-color: white;
 }
 
 .maxTemp {
   grid-area: maxTemp;
-  background-color: white;
 }
 
 .minTemp {
   grid-area: minTemp;
-  background-color: white;
 }
 
 .humidity {
   grid-area: humidity;
-  background-color: white;
 }
 
 footer {
   grid-area: footer;
   margin-top: auto;
   text-align: right;
-  background-color: white;
 }

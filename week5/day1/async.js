@@ -1,9 +1,22 @@
-const getWeatherData = async ()=> {
-    const data = await fetch("http://api.openweathermap.org/data/2.5/weather?zip=77546&appid=622d85fb1a656b0a3ab04b6a4f7fe706&units=imperial")
-    const formattedJson = await data.json()
-    console.log(formattedJson)
+const zipInput = document.createElement("input")
+zipInput.className = "zip"
+zipInput.type ="text"
+zipInput.placeholder = "Enter your zipcode"
 
-    const mainDiv = document.querySelector(".main-container")
+const submit = document.createElement("button")
+submit.className = "button"
+submit.type = "submit"
+submit.innerHTML = "Search"
+
+const mainDiv = document.querySelector(".main-container")
+mainDiv.append(zipInput, submit)
+
+const getWeatherData = async ()=> {
+
+    const zipValue = document.querySelector(".zip").value
+    const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipValue}&appid=622d85fb1a656b0a3ab04b6a4f7fe706&units=imperial`)
+    const formattedJson = await data.json()
+
     const city = document.createElement("h3")
     city.className = "city"
     city.innerHTML = "Location"
@@ -44,4 +57,5 @@ const getWeatherData = async ()=> {
 
     mainDiv.append(city, temp, maxTemp, minTemp, humidity, footer)
 }
-getWeatherData()
+
+submit.addEventListener("click", ()=> getWeatherData())
