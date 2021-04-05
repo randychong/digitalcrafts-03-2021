@@ -1,0 +1,115 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@randychong 
+DigitalCraftsStudents
+/
+fs-immersive-03-2021
+Private
+9
+10
+Code
+Issues
+18
+Pull requests
+Actions
+Projects
+Security
+Insights
+fs-immersive-03-2021/week5/day1/examples/index.html
+@jwfrasier
+jwfrasier async await
+…
+Latest commit b4ec428 now
+ History
+ 1 contributor
+71 lines (64 sloc)  2.27 KB
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>XML HTTP Request</h1>
+    <div class="root">
+
+    </div>
+</body>
+<script>
+const getPokemonDataWithXML = () => {
+    const request = new XMLHttpRequest()
+    
+    request.onreadystatechange = function(){
+        if(this.readyState === 4){
+            const response = JSON.parse(this.responseText)
+            const image = document.createElement("img")
+            image.src = response.sprites.front_default
+            const div = document.querySelector(".root")
+            div.append(image)
+        }
+    }
+    // // open takes in two arguments, HTTP Method, is the URL or location of what you want to get
+        request.open("GET","https://pokeapi.co/api/v2/pokemon/6")
+        request.send()
+}
+
+// async await function GetPokemon (){}
+const getPokemonDataWithAsyncAwait = async ()=> {
+    // this is how you would do it if you use async await
+    const data = await fetch("https://pokeapi.co/api/v2/pokemon/6")
+    // convert to json
+    const formattedJson = await data.json()
+
+    let name = document.createElement("h1")
+    name.innerHTML = formattedJson.name
+    let img = document.createElement("img")
+    let root = document.querySelector(".root")
+    img.src = formattedJson.sprites.front_default
+    root.append(img, name)
+}
+
+const getPokemonDataWithPromises=()=> {
+    // fetching, we need to have the URL
+    // we fetch(url).then(convertTheRespone to JSON)
+    // after we convert to json, .then(data) we can do whatever with our data
+    // now that we have the data, we can access it and use it to create
+    // elements on the page
+    fetch("https://pokeapi.co/api/v2/pokemon/6")
+    // this is how you'd do it if you use fetch with promises
+    // you would use .then()
+    .then(response => response.json())
+    .then(data => {
+        let name = document.createElement("h1")
+        name.innerHTML = data.name
+        let img = document.createElement("img")
+        let root = document.querySelector(".root")
+        img.src = data.sprites.front_default
+        root.append(img, name)
+    })
+}
+    getPokemonDataWithAsyncAwait()
+  
+
+</script>
+</html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

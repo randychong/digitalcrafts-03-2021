@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="root">
     
 </body>
+<script>
+    function reverseString(string) {
+        // let splitString = string.split("", 5)
+        let newString = string.substr(4,1)
+        let newString2 = string.substr(3,1)
+        let newString3 = string.substr(2,1)
+        let newString4 = string.substr(1,1)
+        let newString5 = string.substr(0,1)
+        return(newString + newString2 + newString3 + newString4 + newString5)
+}
+console.log(reverseString("randy"))
+</script>
 </html>
