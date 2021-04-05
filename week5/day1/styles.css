@@ -1,0 +1,48 @@
+body {
+  background-image: url(https://bit.ly/3mji4VI);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "location location location"
+    "temp temp temp"
+    "temp temp temp"
+    "maxTemp minTemp humidity"
+    "footer footer footer";
+}
+
+.city {
+  grid-area: location;
+  background-color: white;
+  opacity: 50%;
+}
+
+.temp {
+  grid-area: temp;
+  background-color: white;
+}
+
+.maxTemp {
+  grid-area: maxTemp;
+  background-color: white;
+}
+
+.minTemp {
+  grid-area: minTemp;
+  background-color: white;
+}
+
+.humidity {
+  grid-area: humidity;
+  background-color: white;
+}
+
+footer {
+  grid-area: footer;
+  margin-top: auto;
+  text-align: right;
+  background-color: white;
+}
