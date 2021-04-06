@@ -1,9 +1,18 @@
-const getPeopleData = async ()=> {
+const getPeopleData = async () => {
 
-    const peopleData = await fetch("https://fakerapi.it/api/v1/persons")
-    const json = peopleData.json()
+    let peopleData = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30");
+    let json = await peopleData.json();
     console.log(json)
 
-    const people = document.querySelector(".people-info")
+    let counter = 1;
+    for (let person of json.data) {
+        console.log(person);
+        const people = document.createElement("p");
+        people.innerHTML = person.firstname + " " + person.lastname;
+        const peopleDiv = document.querySelector(".people-info")
+        peopleDiv.append(people)
+        counter += 1
+    }
+    return json;
 }
 getPeopleData()
