@@ -49,30 +49,52 @@ body {
   border-radius: 15px;
   border-style: solid;
   height: 35px;
+  outline: none;
 }
 
 .submit:hover {
   background: rgb(245, 242, 242);
 }
 
+.section-header {
+  margin: 0;
+}
+
 .sub-container1 {
   grid-area: location;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 10rem;
+  height: 7rem;
   width: 13rem;
+  padding-top: 5px;
   padding-left: 10px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .sub-container2 {
   grid-area: temp;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 7rem;
+  width: 13rem;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .sub-container3 {
   grid-area: info;
   display: flex;
   justify-content: space-between;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 7rem;
+  width: 29rem;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
 }
 
 /* .main-container {
