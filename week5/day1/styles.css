@@ -25,6 +25,7 @@ body {
   background-repeat: no-repeat;
   background-position: -15rem;
   padding: 2rem;
+  border-radius: 15px;
 }
 .sub-container0 {
   grid-area: input;
@@ -37,6 +38,7 @@ body {
 .zipInput {
   background: white;
   padding: 5px;
+  padding-left: 15px;
   border-radius: 15px;
   outline: none;
   margin: 5px;
