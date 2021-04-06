@@ -6,6 +6,9 @@ body {
   width: 100vw;
   margin: 0;
   color: rgb(238, 230, 230);
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
 }
 
 .main-container {
