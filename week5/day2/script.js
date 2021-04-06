@@ -18,12 +18,27 @@ const getPeopleData = async () => {
     return json;
 }
 
-const searchButton = document.querySelector(".search-people");
-searchButton.addEventListener("click", () => getPeopleData())
+const peopleButton = document.querySelector(".search-people");
+peopleButton.addEventListener("click", () => getPeopleData())
 
 const getCompanyData = async () => {
 
     let companyData = await fetch("https://fakerapi.it/api/v1/companies?_quantity=5");
-    let json = await companyData.json();
-    console.log(json)
+    let json2 = await companyData.json();
+    console.log(json2);
+
+    let counter = 1;
+    for (let company of json2.data) {
+        const companies = document.createElement("p");
+        companies.className = "companies";
+        companies.innerHTML = company.name;
+        const website = document.createElement("p");
+        website.className = "website";
+        website.innerHTML = company.website;
+        const companyDiv = document.querySelector(".company-container");
+        companyDiv.append(companies, website);
+        counter += 1;
+    }
 }
+const companyButton = document.querySelector(".search-company");
+companyButton.addEventListener("click", () => getCompanyData())
