@@ -1,35 +1,97 @@
 body {
   display: grid;
   place-items: center;
-  /* background: #2980b9;
-  background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
-  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9); */
   font-family: "Nunito", sans-serif;
-  background-image: url("https://unsplash.com/photos/B6hw9ooyldM");
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  color: rgb(238, 230, 230);
 }
 
-h3 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 16px;
-}
 .main-container {
   display: grid;
   grid-template-columns: repeat(3, 10rem);
-  grid-template-rows: 3rem repeat(4, 10rem);
+  grid-template-rows: 5rem repeat(4, 10rem);
   grid-template-areas:
-    "zip button clear"
+    "input button button"
     "location location location"
     "temp temp temp"
     "temp temp temp"
-    "maxTemp minTemp humidity"
-    "footer footer footer";
-  width: 30rem;
+    "info info info";
+  background-image: url("https://bit.ly/3wrLzcu");
+  background-repeat: no-repeat;
+  background-position: -15rem;
+  padding: 2rem;
+}
+.sub-container0 {
+  grid-area: input;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.zip {
+.zipInput {
+  background: white;
+  padding: 5px;
+  border-radius: 15px;
+  outline: none;
+  margin: 5px;
+  height: 20px;
+  width: 8rem;
+  border-style: solid;
+}
+
+.submit {
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  border-style: solid;
+  height: 35px;
+}
+
+.submit:hover {
+  background: rgb(245, 242, 242);
+}
+
+.sub-container1 {
+  grid-area: location;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10rem;
+  width: 13rem;
+  padding-left: 10px;
+}
+
+.sub-container2 {
+  grid-area: temp;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.sub-container3 {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+/* .main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr repeat(4, 1fr);
+  grid-template-areas:
+    "zip button button"
+    "location location location"
+    "temp temp temp"
+    "temp temp temp"
+    "info info info";
+  background-image: url("https://bit.ly/3wrLzcu");
+  background-repeat: no-repeat;
+  background-position: -15rem;
+  padding: 2rem;
+}
+
+.zipInput {
   grid-area: zip;
   width: 8rem;
   height: 2rem;
@@ -37,10 +99,11 @@ h5 {
   border-radius: 5rem;
   border-width: 1px;
   padding-left: 1rem;
+  margin-bottom: 1rem;
   background: white;
 }
 
-.button {
+.submit {
   grid-area: button;
   height: 2rem;
   width: 6rem;
@@ -50,38 +113,36 @@ h5 {
   outline: none;
 }
 
-.button:hover {
+.submit:hover {
   background: rgb(246, 243, 243);
 }
 
-.clear {
-  grid-area: clear;
-  height: 2rem;
-  width: 4rem;
-}
-
-.city {
+.location {
   grid-area: location;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 1rem;
 }
 
-.temp {
+.temperature {
   grid-area: temp;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 1rem;
 }
 
-.maxTemp {
-  grid-area: maxTemp;
-}
-
-.minTemp {
-  grid-area: minTemp;
-}
-
-.humidity {
-  grid-area: humidity;
-}
-
-footer {
-  grid-area: footer;
-  margin-top: auto;
-  text-align: right;
-}
+.sub-container3 {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  height: 8rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+} */
