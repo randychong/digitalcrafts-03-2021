@@ -10,15 +10,20 @@ const getPeopleData = async () => {
         img.height = "160";
         img.height = "200";
         img.src = `http://placeimg.com/640/480/people/${counter}`
+
         const people = document.createElement("p");
         people.className = "people-name";
         people.innerHTML = person.firstname + " " + person.lastname;
+
         const birthday = document.createElement("p");
         birthday.className = "birthday";
         birthday.innerHTML = person.birthday;
+
         const peopleCard = document.createElement("div");
         peopleCard.className = "people-card";
+
         const peopleDiv = document.querySelector(".people-container");
+
         peopleCard.append(img, people, birthday)
         peopleDiv.append(peopleCard);
         counter += 1;

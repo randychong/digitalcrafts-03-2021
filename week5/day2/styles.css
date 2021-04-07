@@ -1,11 +1,13 @@
 .people-card {
-  background: #12c2e9;
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  background: #7f7fd5;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
   margin: 1rem;
   padding: 1rem;
   width: 20rem;
   border-radius: 15px;
+  display: grid;
+  place-items: center;
 }
 
 .profile-image {
