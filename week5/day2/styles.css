@@ -43,6 +43,10 @@ body {
   border-radius: 5px;
 }
 
+p {
+  margin: 0.5rem;
+}
+
 .search-company {
   border-style: solid;
   height: 2rem;
