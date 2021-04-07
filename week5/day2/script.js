@@ -6,8 +6,9 @@ const getPeopleData = async () => {
     let counter = 1;
     for (let person of json.data) {
         const img = document.createElement("img");
+        img.className = "profile-image";
         img.height = "160";
-        img.height = "240";
+        img.height = "200";
         img.src = `http://placeimg.com/640/480/people/${counter}`
         const people = document.createElement("p");
         people.className = "people-name";

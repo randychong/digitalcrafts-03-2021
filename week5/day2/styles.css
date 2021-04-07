@@ -2,4 +2,12 @@
   background: #12c2e9;
   background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
   background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  margin: 1rem;
+  padding: 1rem;
+  width: 20rem;
+  border-radius: 15px;
+}
+
+.profile-image {
+  border-radius: 5px;
 }
