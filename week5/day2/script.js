@@ -63,10 +63,14 @@ const getCompanyData = async () => {
         const companyCard = document.createElement("div");
         companyCard.className = "company-card";
 
+        const cardContainer2 = document.createElement("div")
+        cardContainer2.className = "card-container2";
+
         const companyDiv = document.querySelector(".company-container");
 
         companyCard.append(img2, companies, website);
-        companyDiv.append(companyCard);
+        cardContainer2.append(companyCard)
+        companyDiv.append(cardContainer2);
         counter += 1;
     }
 }
