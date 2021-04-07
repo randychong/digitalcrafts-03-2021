@@ -1,3 +1,19 @@
+body {
+  background: url(https://bit.ly/39R364c);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.button1 {
+}
+
 .people-card {
   background: #7f7fd5;
   background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
@@ -26,4 +42,8 @@
   border-radius: 15px;
   display: grid;
   place-items: center;
+}
+
+.company-image {
+  border-radius: 5px;
 }
