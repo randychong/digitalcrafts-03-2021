@@ -6,9 +6,8 @@ function getDate() {
 ];
     const month = monthNames[today.getMonth()];
     today = month + ' ' + dd;
-    console.log(today)
     const currentDate = document.querySelector(".current-date");
-    currentDate.append(today);
+    currentDate.innerHTML = today;
 }
 getDate()
 
