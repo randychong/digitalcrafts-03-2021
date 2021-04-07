@@ -7,10 +7,12 @@ function getDate() {
         minute: 'numeric',
         hour12: true};
     const time = new Intl.DateTimeFormat('en-US', options).format();
+    console.log(time)
     const month = monthNames[today.getMonth()];
-    today = month + ' ' + dd + ' ' + time;
+    today = month + ' ' + dd + ' | ' + time;
     const currentDate = document.querySelector(".current-date");
     currentDate.innerHTML = today;
+    
 }
 getDate()
 
