@@ -1,7 +1,10 @@
 function getDate() {
     let today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+    const mm = monthNames[today.getMonth()];
     const yyyy = today.getFullYear();
     today = mm + '/' + dd + '/' + yyyy;
     console.log(today)
