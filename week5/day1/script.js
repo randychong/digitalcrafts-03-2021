@@ -2,11 +2,8 @@ function getDate() {
     let today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const options = {
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true};
-    const time = new Intl.DateTimeFormat('en-US', options).format();
+    const options = {hour: 'numeric', minute: 'numeric', hour12: true};
+    let time = new Intl.DateTimeFormat('en-US', options).format();
     console.log(time)
     const month = monthNames[today.getMonth()];
     today = month + ' ' + dd + ' | ' + time;
