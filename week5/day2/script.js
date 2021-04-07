@@ -5,14 +5,21 @@ const getPeopleData = async () => {
 
     let counter = 1;
     for (let person of json.data) {
+        const img = document.createElement("img");
+        img.height = "160";
+        img.height = "240";
+        img.src = `http://placeimg.com/640/480/people/${counter}`
         const people = document.createElement("p");
         people.className = "people-name";
         people.innerHTML = person.firstname + " " + person.lastname;
         const birthday = document.createElement("p");
         birthday.className = "birthday";
-        birthday.innerHTML = person.birthday
+        birthday.innerHTML = person.birthday;
+        const peopleCard = document.createElement("div");
+        peopleCard.className = "people-card";
         const peopleDiv = document.querySelector(".people-container");
-        peopleDiv.append(people, birthday);
+        peopleCard.append(img, people, birthday)
+        peopleDiv.append(peopleCard);
         counter += 1;
     }
     return json;
