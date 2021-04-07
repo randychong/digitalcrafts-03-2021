@@ -3,6 +3,7 @@ body {
   background-repeat: repeat-y;
   background-size: 100%;
   font-family: "Noto Sans", sans-serif;
+  padding: 2rem;
 }
 
 .main-container {
