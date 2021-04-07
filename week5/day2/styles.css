@@ -11,7 +11,17 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.button1 {
+.search-people {
+  border-style: solid;
+  height: 2rem;
+  border-radius: 15px;
+  font-size: 20px;
+  outline: none;
+}
+.search-people:hover {
+  background: #7f7fd5;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
 }
 
 .people-card {
@@ -28,6 +38,21 @@ body {
 
 .profile-image {
   border-radius: 5px;
+}
+
+.search-company {
+  border-style: solid;
+  height: 2rem;
+  border-radius: 15px;
+  font-size: 20px;
+  outline: none;
+}
+
+.search-company:hover {
+  background: #7f7fd5;
+  background: #ee9ca7;
+  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
 }
 
 .company-card {

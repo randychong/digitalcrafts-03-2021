@@ -1,6 +1,6 @@
 const getPeopleData = async () => {
 
-    let peopleData = await fetch("https://fakerapi.it/api/v1/persons?_quantity=5");
+    let peopleData = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30");
     let json = await peopleData.json();
 
     let counter = 1;
@@ -15,16 +15,16 @@ const getPeopleData = async () => {
         people.className = "people-name";
         people.innerHTML = person.firstname + " " + person.lastname;
 
-        const birthday = document.createElement("p");
-        birthday.className = "birthday";
-        birthday.innerHTML = person.birthday;
+        const email = document.createElement("p");
+        email.className = "email";
+        email.innerHTML = person.email;
 
         const peopleCard = document.createElement("div");
         peopleCard.className = "people-card";
 
         const peopleDiv = document.querySelector(".people-container");
 
-        peopleCard.append(img, people, birthday)
+        peopleCard.append(img, people, email)
         peopleDiv.append(peopleCard);
         counter += 1;
     }
