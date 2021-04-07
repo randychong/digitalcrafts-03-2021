@@ -4,12 +4,14 @@ $(document).ready(() => {
 
 $();
 
-const divContainer = document.querySelector("div")
-const $jdivCOntainer = $("<div></div>");
+const divContainer = document.createElement("div")
+const $jdivCOntainer = $("<div>");
 
 const $header3 = $("<h3>", {
     text: "Randy is Here",
 });
+
+$header3.css("color", "blue");
 
 $jdivCOntainer.append($header3);
 console.log($jdivCOntainer);
