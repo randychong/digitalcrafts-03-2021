@@ -36,7 +36,7 @@ peopleButton.addEventListener("click", () => getPeopleData())
 
 const getCompanyData = async () => {
 
-    let companyData = await fetch("https://fakerapi.it/api/v1/companies?_quantity=5");
+    let companyData = await fetch("https://fakerapi.it/api/v1/companies?_quantity=30");
     let json2 = await companyData.json();
     console.log(json2);
 

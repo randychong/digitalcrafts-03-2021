@@ -1,5 +1,5 @@
 body {
-  background: url(https://bit.ly/39R364c);
+  background: url(https://bit.ly/3t39Ljs);
   background-repeat: repeat-y;
   background-size: 100%;
   font-family: "Noto Sans", sans-serif;
@@ -18,6 +18,8 @@ body {
   border-radius: 15px;
   font-size: 20px;
   outline: none;
+  border-width: 1px;
+  background: white;
 }
 .search-people:hover {
   background: #7f7fd5;
@@ -29,7 +31,7 @@ body {
   background: #7f7fd5;
   background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
-  margin: 1rem;
+  margin: 2rem;
   padding: 1rem;
   width: 18rem;
   border-radius: 15px;
@@ -47,6 +49,8 @@ body {
   border-radius: 15px;
   font-size: 20px;
   outline: none;
+  border-width: 1px;
+  background: white;
 }
 
 .search-company:hover {
@@ -61,8 +65,7 @@ body {
   background: #ee9ca7;
   background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
   background: linear-gradient(to right, #ffdde1, #ee9ca7);
-
-  margin: 1rem;
+  margin: 2rem;
   padding: 1rem;
   width: 18rem;
   border-radius: 15px;
