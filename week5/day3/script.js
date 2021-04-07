@@ -7,7 +7,7 @@ $();
 const divContainer = document.querySelector("div")
 const $jdivCOntainer = $("<div></div>");
 
-const $header3 = $('h3', {
+const $header3 = $("<h3>", {
     text: "Randy is Here",
 });
 
