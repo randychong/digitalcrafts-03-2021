@@ -37,3 +37,5 @@ const getWeatherData = async ()=> {
 
 const submit = document.querySelector(".submit");
 submit.addEventListener("click", ()=> getWeatherData());
+
+setInterval(getDate, 1000);
