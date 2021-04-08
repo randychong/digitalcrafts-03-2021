@@ -9,10 +9,29 @@
   width: 50%;
   background-color: lightskyblue;
   /* transition: 200ms ease; */
-  animation: animation-1 200ms ease;
+  animation: animation-1 200ms ease forwards infinite alternate;
+  animation-play-state: paused;
+  border-radius: 300px;
 }
 
 .parent:hover .child {
-  transform: translateX(100%);
-  background-color: lightseagreen;
+  /* transform: translateX(100%); */
+  /* background-color: lightseagreen; */
+  animation-play-state: running;
+}
+
+@keyframes animation-1 {
+  0% {
+    transform: translateX(10%);
+  }
+  33% {
+    /* background: lightseagreen; */
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
