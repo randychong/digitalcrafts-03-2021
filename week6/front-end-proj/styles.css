@@ -34,7 +34,24 @@ body {
 .search-input {
   height: 2rem;
   padding-left: 5px;
+  font-size: 16px;
+  outline: none;
+  border-style: solid;
+  border-radius: 5px;
 }
 
-.button {
+.search-button {
+  border-style: solid;
+  height: 2.5rem;
+  width: 7rem;
+  border-radius: 5px;
+  font-size: 20px;
+  outline: none;
+  border-width: 1px;
+  background-color: transparent;
+  transition: 200ms ease;
+}
+
+.search-button:hover {
+  background: rgb(241, 239, 239);
 }
