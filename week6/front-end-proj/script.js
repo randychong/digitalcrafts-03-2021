@@ -1,4 +1,4 @@
-const mainContainer = document.querySelector(".main-container")
+const recipeContainer = document.querySelector(".recipe-container")
 const searchButton = document.querySelector(".search-button")
 
 const getRecipe = async () => {
@@ -23,7 +23,7 @@ const getRecipe = async () => {
         recipeCard.className = "recipe-card"
         
         recipeCard.append(img, recipe)
-        mainContainer.append(recipeCard);
+        recipeContainer.append(recipeCard);
         counter += 1;
     }
 }
