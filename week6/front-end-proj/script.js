@@ -9,10 +9,12 @@ const getRecipe = async () => {
     })
     let json = await data.json();
     console.log(json);
-    const recipe = document.createElement("p");
-    const img = document.createElement("img");
-    img.src = "https://bit.ly/3wQhljo";
-    recipe.innerHTML = json.results[0].title;
-    mainContainer.append(img, recipe);
+    counter = 1;
+    for (result of json.results) {
+        const recipe = document.createElement("p");
+        recipe.innerHTML = json.results[`${counter}`].title;
+        mainContainer.append(recipe);
+        counter += 1;
+    }
 }
 getRecipe();
