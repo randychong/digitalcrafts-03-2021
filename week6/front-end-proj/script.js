@@ -24,8 +24,11 @@ const getRecipe = async () => {
 
         const recipeCard = document.createElement("div");
         recipeCard.className = `recipe-card${counter}`
+
+        const urlContainer = document.createElement("p")
         
-        recipeCard.append(img, url)
+        urlContainer.append(url)
+        recipeCard.append(img, urlContainer)
         recipeContainer.append(recipeCard);
         counter += 1;
     }
