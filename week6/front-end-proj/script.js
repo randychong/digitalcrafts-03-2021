@@ -20,6 +20,7 @@ const getRecipe = async () => {
         const url = document.createElement("a");
         url.innerHTML = json.results[`${counter}`].title;
         url.href = json.results[`${counter}`].sourceUrl;
+        url.className = "link"
 
         const recipeCard = document.createElement("div");
         recipeCard.className = `recipe-card${counter}`
