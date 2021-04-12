@@ -55,3 +55,23 @@ body {
 .search-button:hover {
   background: rgb(241, 239, 239);
 }
+
+@media (max-width: 600px) {
+  .recipe-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .recipe-card {
+    width: 300px;
+  }
+
+  .recipe-image {
+    width: 250px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
