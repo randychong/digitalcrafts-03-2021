@@ -1,5 +1,5 @@
-const recipeContainer = document.querySelector(".recipe-container")
-const searchButton = document.querySelector(".search-button")
+const recipeContainer = document.querySelector(".recipe-container");
+const searchButton = document.querySelector(".search-button");
 
 const getRecipe = async () => {
     const search = document.querySelector(".search-input").value
@@ -34,4 +34,11 @@ const getRecipe = async () => {
     }
 }
 
-searchButton.addEventListener("click", ()=> getRecipe());
+searchButton.addEventListener("click", ()=> {
+    if (recipeContainer != "") {
+        recipeContainer.innerHTML = ""
+        getRecipe()
+    }   else {
+        getRecipe()
+    }
+});
