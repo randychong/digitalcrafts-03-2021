@@ -65,6 +65,7 @@ body {
 
   .recipe-card {
     width: 300px;
+    padding: 0.5rem;
   }
 
   .recipe-image {
