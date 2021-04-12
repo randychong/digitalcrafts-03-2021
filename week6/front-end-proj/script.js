@@ -15,13 +15,14 @@ const getRecipe = async () => {
     for (result of json.results) {
         const img = document.createElement("img");
         img.src = `https://spoonacular.com/recipeImages/${json.results[`${counter}`].id}-480x360.jpg`;
+        img.className = "recipe-image";
 
         const url = document.createElement("a");
         url.innerHTML = json.results[`${counter}`].title;
         url.href = json.results[`${counter}`].sourceUrl;
 
         const recipeCard = document.createElement("div");
-        recipeCard.className = "recipe-card"
+        recipeCard.className = `recipe-card${counter}`
         
         recipeCard.append(img, url)
         recipeContainer.append(recipeCard);
