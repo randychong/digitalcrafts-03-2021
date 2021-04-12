@@ -4,10 +4,10 @@ const searchButton = document.querySelector(".search-button")
 const getRecipe = async () => {
     const search = document.querySelector(".search-input").value
     let data = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search}`, {
-        "headers": {
-            "x-rapidapi-key": "0eb660dc97msh0b6247972cec6a3p1c8277jsn29d8b3adfdd2",
-            "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
-        }
+        // "headers": {
+        //     "x-rapidapi-key": "0eb660dc97msh0b6247972cec6a3p1c8277jsn29d8b3adfdd2",
+        //     "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+        // }
     })
     let json = await data.json();
     console.log(json);
@@ -15,9 +15,15 @@ const getRecipe = async () => {
     for (result of json.results) {
         const img = document.createElement("img");
         img.src = `https://spoonacular.com/recipeImages/${json.results[`${counter}`].id}-556x370.jpg`;
+
         const recipe = document.createElement("p");
         recipe.innerHTML = json.results[`${counter}`].title;
-        mainContainer.append(img, recipe);
+
+        const recipeCard = document.createElement("div");
+        recipeCard.className = "recipe-card"
+        
+        recipeCard.append(img, recipe)
+        mainContainer.append(recipeCard);
         counter += 1;
     }
 }
