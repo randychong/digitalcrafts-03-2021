@@ -2,3 +2,9 @@
   display: grid;
   place-items: center;
 }
+
+.recipe-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
