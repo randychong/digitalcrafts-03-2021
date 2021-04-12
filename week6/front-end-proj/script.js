@@ -10,7 +10,6 @@ const getRecipe = async () => {
         }
     })
     let json = await data.json();
-    console.log(json);
     counter = 0;
     for (result of json.results) {
         const img = document.createElement("img");
