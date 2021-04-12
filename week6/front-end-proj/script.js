@@ -23,7 +23,7 @@ const getRecipe = async () => {
         url.className = "link"
 
         const recipeCard = document.createElement("div");
-        recipeCard.className = `recipe-card${counter}`
+        recipeCard.className = "recipe-card"
 
         const urlContainer = document.createElement("p")
         
