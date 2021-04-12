@@ -9,11 +9,13 @@ const getRecipe = async () => {
     })
     let json = await data.json();
     console.log(json);
-    counter = 1;
+    counter = 0;
     for (result of json.results) {
+        const img = document.createElement("img");
+        img.src = `https://spoonacular.com/recipeImages/${json.results[`${counter}`].id}-556x370.jpg`;
         const recipe = document.createElement("p");
         recipe.innerHTML = json.results[`${counter}`].title;
-        mainContainer.append(recipe);
+        mainContainer.append(img, recipe);
         counter += 1;
     }
 }
