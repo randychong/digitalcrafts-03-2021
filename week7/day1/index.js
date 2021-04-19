@@ -10,6 +10,6 @@ const server = http.createServer((req, res) => {
     res.end("hello");
 })
 
-server.listen(port, address, () => {
+server.listen(PORT, address, () => {
     console.log(`server is on ${address}:${PORT}`)
 })
