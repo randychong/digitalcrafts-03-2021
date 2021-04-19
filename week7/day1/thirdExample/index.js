@@ -5,22 +5,34 @@ const { readFile } = require("fs")
 const port = 3003;
 
 app.get("/", (req, res) => {
-    res.send("anyeonghaseyo")
+    readFile("./index.html", "utf8", (err, html) => {
+    res.send(html);
+    });
 });
 
 app.get("/home", (req, res) => {
-    res.send("anyeonghaseyo home");
+    readFile("./homepage.html", "utf8", (err, html) => {
+    res.send(html);
+    });
 });
 
+app.get("/main", (req, res) => {
+    readFile("./main.html", "utf8", (err, html) => {
+    res.send(html);
+    });
+})
+
 app.post("/messages", (req, res) => {
-    const message ="anyeonghaseyo";
+    const {logo, logoname} = req.body
+
+    const message = `Your logo is ${logo} and it is called ${logoname}`;
     res.send(message);
 })
 
 app.get("*", (req, res) => {
-    const message ="bad anyeonghaseyo";
-    readFile("./index.html", "utf8", (err, html))
+    readFile("./bad.html", "utf8", (err, html) => {
     res.send(html);
+    });
 });
 
 app.listen(port, () => {
