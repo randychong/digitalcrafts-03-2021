@@ -7,6 +7,8 @@ const address ="127.0.0.1";
 const PORT = 3001;
 const {readFile} = require("fs");
 
+app.use(express.json());
+
 // const server = http.createServer((req, res) => {
 //     console.log(req.url);
 
@@ -20,16 +22,21 @@ const {readFile} = require("fs");
 //     }
 // })
 app.get("/", (req, res) => {
+    readFile("./index.html", "utf8", (err, html) => {
+        res.send(html)
+    })
     // res.end("Hello");
 })
 
-app.get("another place", (req, res) => {
+app.get("/home", (req, res) => {
+    readFile("./homepage.html", "utf8", (err, html) => {
+        res.send(html)
     // res.end("Hello another place");
 })
 
-app.listen(PORT), () => {
-    console.log(`Your server is listening on ${PORT}`)};
-
+app.listen(PORT, () => {
+    console.log(`Your server is listening on ${PORT}`);
+});
 
 // server.listen(PORT, address, () => {
 //     console.log(`server is on ${address}:${PORT}`)
