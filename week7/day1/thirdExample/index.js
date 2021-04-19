@@ -4,6 +4,8 @@ const { readFile } = require("fs")
 
 const port = 3003;
 
+app.use=(express.json())
+
 app.get("/", (req, res) => {
     readFile("./index.html", "utf8", (err, html) => {
     res.send(html);
