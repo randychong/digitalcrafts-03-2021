@@ -11,6 +11,6 @@
   margin: auto;
 }
 
-#root {
-  background-image: url(week7\day1\homework\images\starry_sky_boat_reflection_125803_1920x1080.jpg);
+body {
+  background-image: url(.images/starry_sky.jpg);
 }
