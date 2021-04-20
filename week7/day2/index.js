@@ -3,12 +3,13 @@ const app = express();
 
 const port = 3006;
 
+app.use(express.json())
+
 app.post("/", (req, res) => {
     const {logo, name} = req.body
-    const uppercased = capitalizeNames(req.body)
-    const message = `Your logo is ${logo} `
-    res.send(message)
-})
+    const message = `Your logo is ${logo} and your name is ${name}`
+    res.send(message);
+});
 
 app.get("/about", (req, res) => {
     const message = "Welcome to the about page"
