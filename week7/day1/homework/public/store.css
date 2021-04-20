@@ -1,0 +1,32 @@
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.child-container {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+}
+
+#root {
+  font-family: "Ubuntu", sans-serif;
+  background: url(https://bit.ly/3v6NvWy) center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+}
