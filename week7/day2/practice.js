@@ -12,6 +12,18 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/friends/:handle', (req, res) => {
+    const {handle} = req.params;
+    const friend = db.find(f => f.handle === handle);
+
+    if (friend) {
+        res.render('friend');
+    } else {
+        res.status(404)
+            .send(`no friend with handle ${handle}`)
+    }
+});
+
 app.listen(port, () => {
     console.log(`Your server is being hosted on localhost:${port}`);
 });
