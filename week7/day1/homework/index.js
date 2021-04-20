@@ -22,6 +22,12 @@ app.get("/contact", (req, res) => {
     });
 });
 
+app.get("*", (req, res) => {
+    readFile("./error.html", "utf8", (err, html) => {
+    res.send(html);
+    });
+});
+
 app.listen(port, () => {
     console.log(`Your server is being hosted on localhost:${port}`);
 });
