@@ -5,7 +5,11 @@ const { readFile } = require("fs");
 const port = 3004;
 
 app.get("/", (req, res) => {
-    readFile("./index.html", "utf8", (err, html) => {
+    readFile("./practice.html", "utf8", (err, html) => {
         res.send(html);
     });
+});
+
+app.listen(port, () => {
+    console.log(`Your server is being hosted on localhost:${port}`);
 });
