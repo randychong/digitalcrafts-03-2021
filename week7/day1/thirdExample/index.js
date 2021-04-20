@@ -29,7 +29,7 @@ app.post("/messages", (req, res) => {
 
     const message = `Your logo is ${logo} and it is called ${logoname}`;
     res.send(message);
-})
+});
 
 app.get("*", (req, res) => {
     readFile("./bad.html", "utf8", (err, html) => {
