@@ -6,9 +6,7 @@ const port = 3006;
 app.use(express.json())
 
 app.post("/", (req, res) => {
-    const {logo, name} = req.body
-    const message = `Your logo is ${logo} and your name is ${name}`
-    res.send(message);
+    res.send("Homepage");
 });
 
 app.get("/about", (req, res) => {
