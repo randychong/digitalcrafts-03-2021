@@ -4,6 +4,9 @@ const { readFile } = require("fs");
 
 const port = 3005;
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("./public"));
+
 app.get("/", (req, res) => {
     readFile("./index.html", "utf8", (err, html) => {
         res.send(html);
