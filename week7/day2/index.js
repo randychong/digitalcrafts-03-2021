@@ -3,25 +3,27 @@ const app = express();
 
 const port = 3006;
 
-app.get("/", (req, res) => {
-    const message = "Welcome to the homepage"
+app.post("/", (req, res) => {
+    const {logo, name} = req.body
+    const uppercased = capitalizeNames(req.body)
+    const message = `Your logo is ${logo} `
     res.send(message)
 })
 
 app.get("/about", (req, res) => {
     const message = "Welcome to the about page"
-    res.send(message)
-}
+    res.send(message);
+});
 
 app.get("/team", (req, res) => {
     const message = "Welcome to the team page"
-    res.send(message)
-}
+    res.send(message);
+});
 
 app.get("/FAQ", (req, res) => {
     const message = "Welcome to the FAQ page"
-    res.send(message)
-}
+    res.send(message);
+});
 
 app.listen(port, () => {
     console.log(`Your server is being hosted on localhost:${port}`);
