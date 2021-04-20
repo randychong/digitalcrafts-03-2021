@@ -11,6 +11,14 @@
   margin: auto;
 }
 
-body {
-  background-image: url(.images/starry_sky.jpg);
+#root {
+  font-family: "Ubuntu", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
