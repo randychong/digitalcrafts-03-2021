@@ -26,7 +26,24 @@ app.post("/friends", async (req, res) => {
 
 //view friends
 app.get("/view_friends", async (req, res) => {
+    try {
+        const viewFriends = await pool.query("SELECT * from friends ORDER BY friend_id");
+        res.json(viewFriends.rows);
+    } catch(err) {
+        console.error(err);
+    };
+});
 
+//view friend by id
+app.get("/view_friends/:id", async (req, res) => {
+    try {
+        const{id} = req.params;
+
+        const viewFriendByID = await pool.query("SELECT * from friends WHERE friend_id = ($1)", [id]);
+        res.json(viewFriendByID);
+    } catch(err) {
+        console.error(err);
+    };
 });
 
 app.listen(port, () => {
