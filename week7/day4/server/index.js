@@ -17,9 +17,10 @@ app.post("/friends", async (req, res) => {
     try {
         const {name} = req.body
         const {skill} = req.body
+        const {favorites} = req.body
 
-        const newFriend = await pool.query("INSERT INTO friends (name, skill) VALUES($1, $2)",
-        [name, skill]
+        const newFriend = await pool.query("INSERT INTO friends (name, skill, favorites) VALUES($1, $2, $3)",
+        [name, skill, favorites],
         );
     
         res.json("You've successfully added a new friend! :)");
