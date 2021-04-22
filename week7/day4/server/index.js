@@ -46,6 +46,21 @@ app.get("/view_friends/:id", async (req, res) => {
     };
 });
 
+//update friend
+app.put("/update_friends/:id", async (req, res) => {
+    try {
+        const{id} = req.params;
+        const {name} = req.body;
+
+        const updateFriendByID = await pool.query("UPDATE friends SET name = $1 WHERE friend_id = $2",
+        [name, id]
+        );
+        res.json("Your friendslist was successfully updated!");
+    } catch(err) {
+        console.error(err);
+    };
+});
+
 app.listen(port, () => {
     console.log(`Your server is being hosted on localhost:${port}`)
 });
