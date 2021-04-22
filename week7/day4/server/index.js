@@ -15,9 +15,12 @@ app.get("/", (req, res) => {
 app.post("/friends", async (req, res) => {
     try {
         const {name} = req.body
+        const {skill} = req.body
 
-        const newFriend = await pool.query("INSERT INTO friends (name) VALUES($1)", [name]);
-        
+        const newFriend = await pool.query("INSERT INTO friends (name, skill) VALUES($1, $2)",
+        [name, skill]
+        );
+    
         res.json("You've successfully added a new friend! :)");
     } catch (err) {
         console.log(err.message);
@@ -51,8 +54,9 @@ app.put("/update_friends/:id", async (req, res) => {
     try {
         const{id} = req.params;
         const {name} = req.body;
+        const {skill} = req.body;
 
-        const updateFriendByID = await pool.query("UPDATE friends SET name = $1 WHERE friend_id = $2",
+        const updateFriendByID = await pool.query("UPDATE friends SET name = $1 WHERE friend_id = $2 ",
         [name, id]
         );
         res.json("Your friendslist was successfully updated!");
