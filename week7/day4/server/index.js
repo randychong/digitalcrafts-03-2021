@@ -56,8 +56,8 @@ app.put("/update_friends/:id", async (req, res) => {
         const {name} = req.body;
         const {skill} = req.body;
 
-        const updateFriendByID = await pool.query("UPDATE friends SET name = $1 WHERE friend_id = $2 ",
-        [name, id]
+        const updateFriendByID = await pool.query("UPDATE friends SET name = $1, skill = $2 WHERE friend_id = $3",
+        [name, skill, id]
         );
         res.json("Your friendslist was successfully updated!");
     } catch(err) {
