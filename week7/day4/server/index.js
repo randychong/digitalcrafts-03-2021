@@ -3,12 +3,13 @@ const app = express();
 const cors = require ("cors");
 const port = process.env.PORT || 3008;
 const pool = require("./db.js");
+const pw = require("./datakey");
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("This is Randy's friendlist :)")
+    res.send("This is Randy's friendslist :)")
 });
 
 //add a friend
