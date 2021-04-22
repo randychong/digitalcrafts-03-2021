@@ -18,7 +18,7 @@ app.post("/friends", async (req, res) => {
 
         const newFriend = await pool.query("INSERT INTO friends (name) VALUES($1)", [name]);
         
-        res.json(newFriend);
+        res.json("You've successfully added a new friend! :)");
     } catch (err) {
         console.log(err.message);
     }
@@ -56,6 +56,20 @@ app.put("/update_friends/:id", async (req, res) => {
         [name, id]
         );
         res.json("Your friendslist was successfully updated!");
+    } catch(err) {
+        console.error(err);
+    };
+});
+
+//delete friend :(
+app.delete("/delete_friends/:id", async (req, res) => {
+    try {
+        const{id} = req.params;
+    
+        const deleteFriendByID = await pool.query("DELETE FROM friends WHERE friend_id = $1",
+        [id]
+        );
+        res.json("You've removed a friend :(");
     } catch(err) {
         console.error(err);
     };
