@@ -47,17 +47,32 @@ app.get("/view_shoppinglist", async (req, res) => {
     }
 });
 
+//view shopping list by id
+app.get("/view_shoppinglist/:id", async (req, res) => {
+    try {
+        const {id} = req.params;
+
+        const view_item = await pool.query("SELECT * from products WHERE product_id = ($1)",
+        [id]
+        );
+        res.json(view_item.rows);
+
+    } catch(err) {
+        console.error(err);
+    }
+});
+
 
 //update an item from shopping list
 app.put("/update_shoppinglist/:id", async (req, res) => {
     try {
-        const {product_id} = req.params;
+        const {id} = req.params;
         const {product_name} = req.body;
         const {quantity} = req.body;
         const {price} = req.body;
 
         const update_list = await pool.query("UPDATE products SET product_name = $1, quantity = $2, price = $3 WHERE product_id = $4",
-        [product_name, quantity, price, product_id]
+        [product_name, quantity, price, id]
         );
 
         res.json("Your shopping list has been updated!");
