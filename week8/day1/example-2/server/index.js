@@ -4,7 +4,8 @@ const port = 3010;
 const es6Renderer = require("express-es6-template-engine")
 
 app.engine("html", es6Renderer);
-app.set("views", "template")
+app.set("views", "../template")
+app.set("view engine", "html")
 
 app.listen(port, () => {
     console.log(`Your server is being hosted on localhost:${port}`)
