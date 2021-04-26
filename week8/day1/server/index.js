@@ -4,16 +4,16 @@ const cors = require("cors");
 const port = process.env.PORT || 3009;
 const pool = require("./db.js");
 const pw = require("./datakey");
-const es6Renderer = require('express-es6-template-engine');
+const es6Renderer = require("express-es6-template-engine");
 
-app.engine('html', es6Renderer);
-app.set('views', 'templates');
-app.set('view engine', 'html');
+app.engine("html", es6Renderer);
+app.set("views", "templates");
+app.set("view engine", "html");
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Randy's Node Server!")
+    res.render("home");
 });
 
 //add an item to shopping list
