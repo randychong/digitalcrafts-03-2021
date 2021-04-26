@@ -15,15 +15,26 @@ app.get("/", (req, res) => {
 //add to shopping list
 app.post("/shoppinglist", async (req, res) => {
     try {
-        const {productName} = req.body;
+        const {product_name} = req.body;
         const {quantity} = req.body;
         const {price} = req.body;
 
-        const newItem = await pool.query("INSERT INTO products (productName, quantity, price) VALUES($1, $2, $3)",
-        [productName, quantity, price]
+        const newItem = await pool.query("INSERT INTO products (product_name, quantity, price) VALUES($1, $2, $3)",
+        [product_name, quantity, price]
         );
 
-        res.json("You've added a new item to your shopping list!")
+        res.json("You've added a new item to your shopping list!");
+
+    } catch(err) {
+        console.error(err);
+    }
+});
+
+//view shopping list
+app.get("/view_shoppinglist", async (req, res) => {
+    try {
+        const view_list = await pool.query("SELECT * from products ORDER BY product_id");
+        res.json(view_list.rows);
 
     } catch(err) {
         console.error(err);
