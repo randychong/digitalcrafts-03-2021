@@ -17,13 +17,19 @@ app.get("/", (req, res) => {
 
 app.get("/person/:id", (req, res) => {
     const {id} = req.params
-    const person = people.find(person => 
-        person.id.toString() === id);
+    const person = people.find((person) => 
+        person.people_id.toString() === id);
 
     if(person) {
+        res.render("user", {
+            locals: {
+                person: person,
+            }
+        });
 
     } else {
-        res.status(404).semd(`That user does not exist, there are no users with an id of ${id}.`)
+        res.status(404)
+        .send(`That user does not exist, there are no users with an id of ${id}.`)
     }
 });
 
