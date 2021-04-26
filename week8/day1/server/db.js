@@ -3,10 +3,10 @@ const pw = require("./datakey");
 
 const pool = new Pool({
     user: "postgres",
-    password: `passwordgoesinhere`,
+    password: `${pw}`,
     host: "localhost",
-    port: 5432,
-    database: "databasename",
+    port: 4321,
+    database: "shoppinglist",
     });
 
 module.exports = pool;
