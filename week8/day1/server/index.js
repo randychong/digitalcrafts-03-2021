@@ -12,14 +12,14 @@ app.get("/", (req, res) => {
     res.send("Welcome to Randy's Node Server!")
 });
 
-//add to shopping list
-app.post("/shoppinglist", async (req, res) => {
+//add an item to shopping list
+app.post("/create_shoppinglist", async (req, res) => {
     try {
         const {product_name} = req.body;
         const {quantity} = req.body;
         const {price} = req.body;
 
-        const newItem = await pool.query("INSERT INTO products (product_name, quantity, price) VALUES($1, $2, $3)",
+        const new_item = await pool.query("INSERT INTO products (product_name, quantity, price) VALUES($1, $2, $3)",
         [product_name, quantity, price]
         );
 
@@ -42,7 +42,7 @@ app.get("/view_shoppinglist", async (req, res) => {
 });
 
 
-//update shopping list
+//update an item from shopping list
 app.put("/update_shoppinglist/:id", async (req, res) => {
     try {
         const {product_id} = req.params;
@@ -55,6 +55,22 @@ app.put("/update_shoppinglist/:id", async (req, res) => {
         );
 
         res.json("Your shopping list has been updated!");
+
+    } catch(err) {
+        console.error(err);
+    }
+});
+
+//delete item from shopping list
+app.delete("/delete_shoppinglist/:id" , async (req, res) => {
+    try {
+        const {product_id} = req.params;
+
+        const remove_item = await pool.query("DELETE FROM products WHERE product_id = $1",
+        [product_id]
+        );
+
+        res.json("An item has been removed from your shopping list!");
 
     } catch(err) {
         console.error(err);
