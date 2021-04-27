@@ -18,10 +18,6 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.get("/shoppinglist/:id", (req, res) => {
-    res.render("shoppinglist", {product_id: req.params.id});
-});
-
 //add an item to shopping list
 app.post("/create_shoppinglist", async (req, res) => {
     try {
@@ -52,18 +48,34 @@ app.get("/view_shoppinglist", async (req, res) => {
 });
 
 //view shopping list by id
+// app.get("/view_shoppinglist/:id", async (req, res) => {
+//     try {
+//         const {id} = req.params;
+
+//         const view_list_by_id = await pool.query("SELECT * from products WHERE product_id = ($1)",
+//         [id]
+//         );
+//         res.json(view_list_by_id.rows);
+
+//     } catch(err) {
+//         console.error(err);
+//     }
+// });
+
 app.get("/view_shoppinglist/:id", async (req, res) => {
-    try {
         const {id} = req.params;
 
-        const view_list_by_id = await pool.query("SELECT * from products WHERE product_id = ($1)",
+        const view_item = await pool.query("SELECT product_name FROM products WHERE product_id = ($1)",
         [id]
         );
-        res.json(view_list_by_id.rows);
-
-    } catch(err) {
-        console.error(err);
-    }
+        const item = view_item.rows[0].product_name;
+        if (item) {
+            res.render("shoppinglist", {locals: {item: item} });
+        } else {
+            res
+                .status(404)
+                .send(`There are no items with an id of ${id}`)
+        }
 });
 
 //update an item from shopping list
