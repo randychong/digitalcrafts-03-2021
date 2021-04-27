@@ -18,35 +18,25 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-//add an item to shopping list
-app.post("/create_shoppinglist", async (req, res) => {
-    try {
-        const {product_name} = req.body;
-        const {quantity} = req.body;
-        const {price} = req.body;
+//view page to add item to shopping list
+app.get("/add_item", (req, res) => {
+    res.render("create");
+});
 
-        const new_item = await pool.query("INSERT INTO products (product_name, quantity, price) VALUES($1, $2, $3)",
+//add an item to shopping list
+app.post("/add_item", async (req, res) => {
+    const {product_name, quantity, price} = req.body;
+    try {
+        const add_item = await pool.query("INSERT INTO products (product_name, quantity, price) VALUES($1, $2, $3)",
         [product_name, quantity, price]
         );
-
-        res.json("You've added a new item to your shopping list!");
-
-    } catch(err) {
-        console.error(err);
+        res.status(200).send("The item has been added to your shopping list!");
+    } catch (err) {
+        console.error(err.message);
     }
 });
 
 //view shopping list
-// app.get("/view_shoppinglist", async (req, res) => {
-//     try {
-//         const view_list = await pool.query("SELECT * from products ORDER BY product_id");
-//         res.json(view_list.rows);
-
-//     } catch(err) {
-//         console.error(err);
-//     }
-// });
-
 app.get("/view_shoppinglist", async (req, res) => {
     const view_list = await pool.query("SELECT * from products ORDER BY product_id"
     );

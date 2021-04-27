@@ -9,11 +9,31 @@
 <body>
     <h1>Add Item to Shopping List</h1>
     <h3>Item</h3>
-    <input type="text">
+    <input type="text" class="item_name">
     <h3>Quantity</h3>
-    <input type="text">
+    <input type="text" class="quantity">
     <h3>Price</h3>
-    <input type="text">
-    <button type="submit">Submit</button>
+    <input type="text" class="price">
+    <button onclick="send_data()">Submit</button>
 </body>
+<script>
+    const send_data = async () => {
+        const item_name = document.querySelector(".item_name").value
+        const quantity = document.querySelector(".quantity").value
+        const price = document.querySelector(".price").value
+        const combined_data = {
+            product_name: item_name,
+            quantity: quantity,
+            price: price,
+        }
+        const call_data = await fetch("http://localhost:3009/add_item",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(combined_data)
+        })
+    }
+</script>
 </html>
