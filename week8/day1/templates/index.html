@@ -9,5 +9,12 @@
 <body>
     <h1>Homepage</h1>
     <a href="/view_shoppinglist">View your shopping list</a>
+    <div>
+        ${items.map(item => `
+        </p>${item.product_name}<p>
+        </p>Quantity: ${item.quantity}<p>
+        </p>Price: ${item.price}<p>      
+        `).join("")}
+    </div>
 </body>
 </html>

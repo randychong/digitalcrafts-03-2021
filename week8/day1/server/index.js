@@ -37,31 +37,25 @@ app.post("/create_shoppinglist", async (req, res) => {
 });
 
 //view shopping list
-app.get("/view_shoppinglist", async (req, res) => {
-    try {
-        const view_list = await pool.query("SELECT * from products ORDER BY product_id");
-        res.json(view_list.rows);
-
-    } catch(err) {
-        console.error(err);
-    }
-});
-
-//view shopping list by id
-// app.get("/view_shoppinglist/:id", async (req, res) => {
+// app.get("/view_shoppinglist", async (req, res) => {
 //     try {
-//         const {id} = req.params;
-
-//         const view_list_by_id = await pool.query("SELECT * from products WHERE product_id = ($1)",
-//         [id]
-//         );
-//         res.json(view_list_by_id.rows);
+//         const view_list = await pool.query("SELECT * from products ORDER BY product_id");
+//         res.json(view_list.rows);
 
 //     } catch(err) {
 //         console.error(err);
 //     }
 // });
 
+app.get("/view_shoppinglist", async (req, res) => {
+    const view_list = await pool.query("SELECT * from products ORDER BY product_id"
+    );
+     res.render("index", {
+         locals: {items: view_list.rows}
+     })
+});
+
+//view shopping list by id
 app.get("/view_shoppinglist/:id", async (req, res) => {
         const {id} = req.params;
 
