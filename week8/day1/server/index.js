@@ -4,7 +4,7 @@ const app = express();
 const es6Renderer = require("express-es6-template-engine");
 app.engine("html", es6Renderer);
 app.set("views", "../templates");
-app.set("view engine", "html");
+app.set("view engine", "ejs");
 
 const cors = require("cors");
 const port = process.env.PORT || 3009;
@@ -52,16 +52,15 @@ app.get("/view_shoppinglist/:id", async (req, res) => {
     try {
         const {id} = req.params;
 
-        const view_item = await pool.query("SELECT * from products WHERE product_id = ($1)",
+        const view_list_by_id = await pool.query("SELECT * from products WHERE product_id = ($1)",
         [id]
         );
-        res.json(view_item.rows);
+        res.json(view_list_by_id.rows);
 
     } catch(err) {
         console.error(err);
     }
 });
-
 
 //update an item from shopping list
 app.put("/update_shoppinglist/:id", async (req, res) => {
