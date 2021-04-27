@@ -4,7 +4,7 @@ const app = express();
 const es6Renderer = require("express-es6-template-engine");
 app.engine("html", es6Renderer);
 app.set("views", "../templates");
-app.set("view engine", "ejs");
+app.set("view engine", "html");
 
 const cors = require("cors");
 const port = process.env.PORT || 3009;
@@ -15,7 +15,11 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("index");
+});
+
+app.get("/shoppinglist/:id", (req, res) => {
+    res.render("shoppinglist", {product_id: req.params.id});
 });
 
 //add an item to shopping list
