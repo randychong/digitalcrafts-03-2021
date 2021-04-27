@@ -50,7 +50,7 @@ app.post("/create_shoppinglist", async (req, res) => {
 app.get("/view_shoppinglist", async (req, res) => {
     const view_list = await pool.query("SELECT * from products ORDER BY product_id"
     );
-     res.render("index", {
+     res.render("list", {
          locals: {items: view_list.rows}
      })
 });
@@ -66,7 +66,7 @@ app.get("/view_shoppinglist/:id", async (req, res) => {
         const item_quantity = view_item.rows[0].quantity;
         const item_price = view_item.rows[0].price;
         if (item) {
-            res.render("shoppinglist", {locals: {item_name: item, item_quantity: item_quantity, item_price: item_price} });
+            res.render("item", {locals: {item_name: item, item_quantity: item_quantity, item_price: item_price} });
         } else {
             res
                 .status(404)
