@@ -65,12 +65,14 @@ app.get("/view_shoppinglist", async (req, res) => {
 app.get("/view_shoppinglist/:id", async (req, res) => {
         const {id} = req.params;
 
-        const view_item = await pool.query("SELECT product_name FROM products WHERE product_id = ($1)",
+        const view_item = await pool.query("SELECT product_name, quantity, price FROM products WHERE product_id = ($1)",
         [id]
         );
         const item = view_item.rows[0].product_name;
+        const item_quantity = view_item.rows[0].quantity;
+        const item_price = view_item.rows[0].price;
         if (item) {
-            res.render("shoppinglist", {locals: {item: item} });
+            res.render("shoppinglist", {locals: {item_name: item, item_quantity: item_quantity, item_price: item_price} });
         } else {
             res
                 .status(404)
