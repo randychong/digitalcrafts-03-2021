@@ -31,3 +31,13 @@ app.post('/users/:id', async (req, res) => {
     
     res.json(updatedUser);
 });
+
+app.delete('/users/:id', async (req, res) => {
+    const { id } = req.params;
+    const deletedUser = await User.destroy({
+        where: {
+            id
+        }
+    });
+    res.json(deletedUser);
+});
