@@ -1,3 +1,5 @@
+const { User, Photo } = require('./models');
+
 app.post('/users', async (req, res) => {
     // req.body contains an Object with firstName, lastName, email
     const { firstName, lastName, email } = req.body;
@@ -40,4 +42,13 @@ app.delete('/users/:id', async (req, res) => {
         }
     });
     res.json(deletedUser);
+});
+
+app.get('/users/photos', async (req, res) => {
+    const users = await User.findAll({
+        include: [{
+            model: Photo
+        }]
+    });
+    res.json(users);
 });
