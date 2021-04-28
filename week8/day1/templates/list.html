@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randy's Shopping List</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Randy's Shopping List</h1>
-    <div>
+    <div class="item-container">
         ${items.map(item => `
         </p>${item.product_name}<p>
         </p>Quantity: ${item.quantity}<p>
-        </p>Price: ${item.price}<p>      
+        </p class="price">Price: ${item.price}<p>   
+        <p>--------------------</p>   
         `).join("")}
     </div>
 </body>
