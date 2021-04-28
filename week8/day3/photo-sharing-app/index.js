@@ -12,3 +12,8 @@ app.post('/users', async (req, res) => {
         id: newUser.id
     });
 })
+
+app.get('/users', async (req, res) => {
+    const users = await User.findAll();
+    res.json(users);
+});
