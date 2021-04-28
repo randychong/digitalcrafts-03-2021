@@ -52,3 +52,29 @@ app.get('/users/photos', async (req, res) => {
     });
     res.json(users);
 });
+
+app.post('/users/search', async (req, res) => {
+    const users = await User.findAll({
+        where: {
+            [Sequelize.Op.or]: [
+                { 
+                    firstName: req.body.term,
+                    lastName: req.body.term
+                }
+            ]
+        },
+        include: [{
+            model: Photo
+        }]
+    });
+    res.json(users);
+});
+
+app.get('/photos/users', async (req, res) => {
+    const photos = await Photos.findAll({
+        include: [{
+            model: User
+        }]
+    });
+    res.json(photos);
+});
