@@ -17,3 +17,17 @@ app.get('/users', async (req, res) => {
     const users = await User.findAll();
     res.json(users);
 });
+
+app.post('/users/:id', async (req, res) => {
+    const { id } = req.params;
+    
+    // Assuming that `req.body` is limited to
+    // the keys firstName, lastName, and email
+    const updatedUser = await User.update(req.body, {
+      where: {
+        id
+      }
+    });
+    
+    res.json(updatedUser);
+});
