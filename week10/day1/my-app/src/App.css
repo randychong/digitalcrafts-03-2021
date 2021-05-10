@@ -1,0 +1,25 @@
+.App {
+  height: 400px;
+  width: 400px;
+  background-color: aliceblue;
+}
+
+.AboutMe {
+  height: 100px;
+  width: 100px;
+}
+
+.AboutContainer {
+  height: 100px;
+  width: 100px;
+}
+
+.Nav {
+  height: 100px;
+  width: 100px;
+}
+
+.Sidebar {
+  height: 100px;
+  width: 100px;
+}
