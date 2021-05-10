@@ -1,25 +1,71 @@
 .App {
-  height: 400px;
-  width: 400px;
-  background-color: aliceblue;
+  height: 800px;
+  width: 700px;
+  display: grid;
+  grid-template-areas:
+    "Nav Nav Nav Nav"
+    "Sidebar AboutContainer AboutContainer AboutContainer";
+  background: url(https://bit.ly/3t39Ljs) center;
+}
+
+.PageHeader {
+  grid-area: PageHeader;
 }
 
 .AboutMe {
-  height: 100px;
-  width: 100px;
+  height: 50%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AboutBody {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .AboutContainer {
-  height: 100px;
-  width: 100px;
+  grid-area: AboutContainer;
+  width: 600px;
+  height: 700px;
+  text-align: center;
+}
+
+.AboutHeader {
+  font-size: 20px;
+}
+
+.ProfileImage {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
 }
 
 .Nav {
   height: 100px;
-  width: 100px;
+  grid-area: Nav;
+  padding-left: 1.7rem;
+}
+
+.NavHeader {
+  font-size: 36px;
 }
 
 .Sidebar {
-  height: 100px;
   width: 100px;
+  height: 700px;
+  background-color: rgba(255, 255, 255, 0.5);
+  grid-area: Sidebar;
+  text-align: center;
+  transition: 200ms ease;
+}
+
+.Sidebar:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.SidebarItem {
+  margin-bottom: 3rem;
 }
