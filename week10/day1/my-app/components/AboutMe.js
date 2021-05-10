@@ -9,5 +9,3 @@ export default class AboutMe extends Component {
         );
     }
 }
-
-export default AboutMe

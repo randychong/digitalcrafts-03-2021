@@ -9,5 +9,3 @@ export default class AboutContainer extends Component {
         );
     }
 }
-
-export default AboutContainer
