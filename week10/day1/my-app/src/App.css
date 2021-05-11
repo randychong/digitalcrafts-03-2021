@@ -6,10 +6,7 @@
     "Nav Nav Nav Nav"
     "Sidebar AboutContainer AboutContainer AboutContainer";
   background: url(https://bit.ly/3t39Ljs) center;
-}
-
-.PageHeader {
-  grid-area: PageHeader;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .AboutMe {
@@ -68,4 +65,8 @@
 
 .SidebarItem {
   margin-bottom: 3rem;
+}
+
+.SidebarItem:hover {
+  cursor: pointer;
 }
