@@ -1,0 +1,9 @@
+.rain {
+  height: 100px;
+  background-color: lightskyblue;
+}
+
+.no-rain {
+  height: 100px;
+  background-color: lightpink;
+}
