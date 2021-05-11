@@ -7,6 +7,7 @@ export default class MotorcyleSection extends Component {
         return (
             <div>
                 <h1>Motorcyle Section</h1>
+                <p>This is the motorcyle section</p>
                 <AmericanMotorcyles />
                 <ForeignMotorcyles />
             </div>

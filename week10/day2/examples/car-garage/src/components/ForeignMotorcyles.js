@@ -4,7 +4,7 @@ export default class ForeignMotorcyles extends Component {
     render() {
         return (
             <div>
-                <h1>Foreign Motorcyles</h1>
+                <h3>Foreign Motorcyles</h3>
             </div>
         )
     }

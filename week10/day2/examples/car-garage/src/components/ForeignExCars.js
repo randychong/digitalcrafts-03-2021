@@ -4,7 +4,7 @@ export default class ForeignExCars extends Component {
     render() {
         return (
             <div>
-                <h1>Foreign Exotic Cars</h1>
+                <h3>Foreign Exotic Cars</h3>
             </div>
         )
     }
