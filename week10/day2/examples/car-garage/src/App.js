@@ -10,8 +10,15 @@ export default class App extends Component {
       vehicles: [
         {
           muscle: [
-            {american: ["Dodge Charger"]}
-        ]
+            {american: [
+                {name: "Dodge Charger"}
+              ]
+            },
+            {foreign: [
+              {name: "Mercedes SLS AMG"}
+            ]
+          }
+          ]
         }
       ]
     }
@@ -21,7 +28,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>Randy Chong</h1>
-        <House vehicles={vehicles[0].muscle[0].american}/>
+        <House vehicles={vehicles[0].muscle[0].american[0].name}/>
       </div>
     )
   }

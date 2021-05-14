@@ -10,7 +10,7 @@ export default class MuscleCarSection extends Component {
                 <h1>Muscle Car Section</h1>
                 <p>This is the muscle car section</p>
                 <AmericanCars vehicles={vehicles}/>
-                <ForeignCars />
+                <ForeignCars vehicles={vehicles}/>
             </div>
         )
     }
