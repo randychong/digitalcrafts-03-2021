@@ -4,7 +4,7 @@ export default class Buttons extends Component {
     render() {
         return (
             <div>
-                
+               <h1>Buttons</h1> 
             </div>
         )
     }
