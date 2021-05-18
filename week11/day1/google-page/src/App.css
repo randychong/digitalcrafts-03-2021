@@ -1,0 +1,88 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgb(144, 138, 138);
+  margin: 0;
+}
+
+.Main-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 2fr 1fr 0.25fr;
+  grid-template-areas:
+    "Navbar"
+    "Navbar"
+    "Center"
+    "Center"
+    "Footer";
+}
+
+.Menu {
+  height: 1rem;
+}
+
+.Randy {
+  height: 2rem;
+  border-radius: 100px;
+  margin-top: -0.5rem;
+}
+
+.Navbar {
+  display: grid;
+  grid-template-columns: 0.5fr 12fr 0.5fr 0.5fr 0.25fr 0.5fr;
+  grid-area: Navbar;
+}
+
+.Google {
+  height: 6rem;
+}
+
+.Input {
+  height: 2.5rem;
+  width: 35rem;
+  border-radius: 20px;
+  outline: none;
+  border: 1px lightgray solid;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Search {
+  height: 1rem;
+}
+
+.Button {
+  height: 2rem;
+  width: 8rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  background: rgb(246, 245, 245);
+  border-radius: 5px;
+}
+
+.Button:hover {
+  cursor: pointer;
+  border: 1px lightgray solid;
+}
+
+.Center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: Center;
+}
+
+.Leaf {
+  height: 1rem;
+}
+
+.Footer-menu {
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr 2.5fr 3fr 0.4fr 0.4fr 0.4fr;
+}
+
+.Footer {
+  background: rgb(246, 245, 245);
+  grid-area: Footer;
+}

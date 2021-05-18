@@ -8,11 +8,15 @@ import Footer from "../src/components/Footer.js"
 function App() {
   return (
     <div className="App">
+      <div className="Main-container">
       <Navbar />
-      <Logo />
-      <Input />
-      <Buttons />
+      <div className="Center-container">
+        <Logo />
+        <Input />
+        <Buttons />
+      </div>
       <Footer />
+      </div>
     </div>
   );
 }

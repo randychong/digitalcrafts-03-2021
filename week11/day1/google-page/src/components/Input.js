@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import Search from "../images/Search.jpg"
 
 export default class Input extends Component {
     render() {
         return (
             <div>
-               <h1>Input</h1> 
+                <div className="Input-container">
+                    <input className="Input"></input>
+                </div>
             </div>
         )
     }

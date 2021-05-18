@@ -4,7 +4,8 @@ export default class Buttons extends Component {
     render() {
         return (
             <div>
-               <h1>Buttons</h1> 
+               <button className="Button">Google Search</button> 
+               <button className="Button">I'm Feeling Lucky</button>
             </div>
         )
     }
