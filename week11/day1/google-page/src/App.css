@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: rgb(144, 138, 138);
   margin: 0;
+  font-size: 14px;
 }
 
 .Main-container {
