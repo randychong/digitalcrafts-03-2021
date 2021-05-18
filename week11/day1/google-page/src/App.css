@@ -29,8 +29,10 @@ body {
 
 .Navbar {
   display: grid;
-  grid-template-columns: 0.5fr 12fr 0.5fr 0.5fr 0.25fr 0.5fr;
+  grid-template-columns: 0.5fr 12fr 0.4fr 0.5fr 0.25fr 0.5fr;
   grid-area: Navbar;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .Google {
@@ -79,7 +81,8 @@ body {
 
 .Footer-menu {
   display: grid;
-  grid-template-columns: 0.4fr 0.4fr 2.5fr 3fr 0.4fr 0.4fr 0.4fr;
+  grid-template-columns: 0.5fr 0.5fr 2.5fr 3fr 0.4fr 0.4fr 0.4fr;
+  padding-left: 2rem;
 }
 
 .Footer {
