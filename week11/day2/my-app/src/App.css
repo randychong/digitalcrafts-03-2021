@@ -1,0 +1,12 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  place-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pokemon-card {
+  background-color: #e7f2f9;
+  margin: 2rem;
+  padding: 2rem;
+}
