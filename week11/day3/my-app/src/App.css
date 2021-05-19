@@ -12,6 +12,7 @@
   background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
   background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
   width: 50%;
+  padding: 2rem;
 }
 
 .shipping-form {
@@ -22,6 +23,7 @@
 .input-item {
   padding: 0.5rem;
   margin: 0.5rem;
+  outline: none;
 }
 
 #street,
