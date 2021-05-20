@@ -40,9 +40,12 @@ export default class Profile extends Component {
                             </a>
                         </p>
                     </div>
+
+                    <p className="name">
+                        Randy Chong
+                    </p>
                     
                     <p className="bio">
-                        Randy Chong |
                         총랜디 |
                         Web Designer | Traveler | Gamer | Chef
                     </p>
