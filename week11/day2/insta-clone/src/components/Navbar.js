@@ -43,7 +43,8 @@ export default class Navbar extends Component {
                         </p>
                         <p>
                             <a>
-                                <img src={Randy} className="nav-icon"></img>
+                                <img src={Randy} className="nav-icon"
+                                id="randy"></img>
                             </a>
                         </p>
                     </div>

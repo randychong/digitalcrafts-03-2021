@@ -1,18 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 .nav-icon {
-  height: 2rem;
+  height: 1.5rem;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px lightgray solid;
-  padding: 1rem;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+}
+
+.icon-container {
+  display: flex;
+}
+
+.nav-icon {
+  margin-left: 1.5rem;
+}
+
+#randy {
+  border-radius: 100px;
+  border: 1px black solid;
+  padding: 0.1rem;
 }
 
 .search {
-  height: 2rem;
+  height: 1.5rem;
+  width: 15rem;
   text-align: center;
+  outline: none;
+  border: 1px lightgray solid;
+  background: rgb(250, 250, 250);
+  border-radius: 5px;
 }
 
 .profile-image {
@@ -27,7 +52,8 @@
 .profile-container {
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  margin: 2rem;
 }
 
 .profile-info {
@@ -35,6 +61,7 @@
   grid-template-areas:
     "handle"
     "profile-stats"
+    "bio"
     "bio-link";
   width: 80%;
 }
@@ -43,6 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 2rem;
 }
 
 .handle {
@@ -58,8 +86,17 @@
   grid-area: profile-stats;
   display: flex;
   justify-content: space-between;
+  height: 2rem;
+}
+
+.bio {
+  grid-area: bio;
+  height: 1.5rem;
 }
 
 .bio-link {
   grid-area: bio-link;
+  text-decoration: none;
+  color: darkblue;
+  height: 2rem;
 }
