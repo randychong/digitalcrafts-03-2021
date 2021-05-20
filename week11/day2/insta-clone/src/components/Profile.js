@@ -15,33 +15,40 @@ export default class Profile extends Component {
                 </div>
                 
                 <div className="profile-info">
-                    <p className="handle">randallchong</p>
+                    <div className="handle-container">
+                        <p className="handle">randallchong</p>
 
-                    <button>Edit Profile</button>
+                        <button className="edit">Edit Profile</button>
 
-                    <p>
-                        <img src={Settings} className="settings"></img>
-                    </p>
+                        <p>
+                            <img src={Settings} className="settings"></img>
+                        </p>
+                    </div>
 
-                    <p className="posts">141 posts</p>
+                    <div className="profile-stats">
+                        <p className="posts">141 posts</p>
 
-                    <p>
-                        <a className="followers">
-                            281 followers
-                        </a>
-                    </p>
+                        <p>
+                            <a className="followers">
+                                281 followers
+                            </a>
+                        </p>
 
-                    <p>
-                        <a className="following">
-                            279 following
-                        </a>
-                    </p>
+                        <p>
+                            <a className="following">
+                                279 following
+                            </a>
+                        </p>
+                    </div>
                     
-                    <p className="bio-info">Randy Chong</p>
-                    <p className="bio-info">총랜디</p>
-                    <p className="bio-info">Web Designer | Traveler | Gamer | Chef</p>
+                    <p className="bio">
+                        Randy Chong
+                        총랜디
+                        Web Designer | Traveler | Gamer | Chef
+                    </p>
+
                     <p>
-                        <a href="randychong.github.io/chongskitchen" className="bio-info">randychong.github.io/chongskitchen</a>
+                        <a href="randychong.github.io/chongskitchen" className="bio-link">randychong.github.io/chongskitchen</a>
                     </p>
                 </div>
             </div>

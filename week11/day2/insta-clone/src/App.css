@@ -12,10 +12,12 @@
 
 .search {
   height: 2rem;
+  text-align: center;
 }
 
 .profile-image {
-  height: 8rem;
+  height: 10rem;
+  border-radius: 100px;
 }
 
 .settings {
@@ -26,4 +28,37 @@
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-areas:
+    "handle"
+    "profile-stats"
+    "bio-link";
+  width: 80%;
+}
+
+.handle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.handle {
+  grid-area: handle;
+  font-size: 30px;
+}
+
+.edit {
+  height: 2rem;
+}
+
+.profile-stats {
+  grid-area: profile-stats;
+  display: flex;
+}
+
+.bio-link {
+  grid-area: bio-link;
 }
