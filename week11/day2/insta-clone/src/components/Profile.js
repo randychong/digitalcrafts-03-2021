@@ -5,15 +5,17 @@ import Settings from "../images/settings.png"
 export default class Profile extends Component {
     render() {
         return (
-            <div>
-                <p>
-                    <a>
-                        <img src={Randy} className="profile-image"></img>
-                    </a>
-                </p>
+            <div className="profile-container">
+                <div className="profile-image-container">
+                    <p>
+                        <a>
+                            <img src={Randy} className="profile-image"></img>
+                        </a>
+                    </p>
+                </div>
                 
                 <div className="profile-info">
-                    <p>randallchong</p>
+                    <p className="handle">randallchong</p>
 
                     <button>Edit Profile</button>
 
@@ -21,17 +23,25 @@ export default class Profile extends Component {
                         <img src={Settings} className="settings"></img>
                     </p>
 
-                    <p>141 posts</p>
+                    <p className="posts">141 posts</p>
 
-                    <p>281 followers</p>
-
-                    <p>279 following</p>
-                    
-                    <p>Randy Chong</p>
-                    <p>총랜디</p>
-                    <p>Web Designer | Traveler | Gamer | Chef</p>
                     <p>
-                        <a href="randychong.github.io/chongskitchen">randychong.github.io/chongskitchen</a>
+                        <a className="followers">
+                            281 followers
+                        </a>
+                    </p>
+
+                    <p>
+                        <a className="following">
+                            279 following
+                        </a>
+                    </p>
+                    
+                    <p className="bio-info">Randy Chong</p>
+                    <p className="bio-info">총랜디</p>
+                    <p className="bio-info">Web Designer | Traveler | Gamer | Chef</p>
+                    <p>
+                        <a href="randychong.github.io/chongskitchen" className="bio-info">randychong.github.io/chongskitchen</a>
                     </p>
                 </div>
             </div>
