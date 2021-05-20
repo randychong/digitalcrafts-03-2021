@@ -10,35 +10,43 @@ export default class Navbar extends Component {
         return (
             <div>
                 <navbar className="navbar">
-                    <p>
-                        <a>Instagram</a>
-                    </p>
-                    <input type="text" placeholder="Search" className="search"></input>
-                    <p>
-                        <a>
-                            <img src={Home} className="nav-icon"></img>
-                        </a>
-                    </p>
-                    <p>
-                        <a>
-                         <img src={Send} className="nav-icon"></img>
-                        </a>
-                    </p>
-                    <p>
-                        <a>
-                            <img src={Compass} className="nav-icon"></img>
-                        </a>
-                    </p>
-                    <p>
-                        <a>
-                            <img src={Heart} className="nav-icon"></img>
-                        </a>
-                    </p>
-                    <p>
-                        <a>
-                            <img src={Randy} className="nav-icon"></img>
-                        </a>
-                    </p>
+                    <div className="instagram">
+                        <p>
+                            <a>Instagram</a>
+                        </p>
+                    </div>
+
+                    <div className="search-container">
+                        <input type="text" placeholder="Search" className="search"></input>
+                    </div>
+
+                    <div className="icon-container">
+                        <p>
+                            <a>
+                                <img src={Home} className="nav-icon"></img>
+                            </a>
+                        </p>
+                        <p>
+                            <a>
+                            <img src={Send} className="nav-icon"></img>
+                            </a>
+                        </p>
+                        <p>
+                            <a>
+                                <img src={Compass} className="nav-icon"></img>
+                            </a>
+                        </p>
+                        <p>
+                            <a>
+                                <img src={Heart} className="nav-icon"></img>
+                            </a>
+                        </p>
+                        <p>
+                            <a>
+                                <img src={Randy} className="nav-icon"></img>
+                            </a>
+                        </p>
+                    </div>
                 </navbar>
             </div>
         )
