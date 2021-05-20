@@ -57,6 +57,7 @@
 .profile-stats {
   grid-area: profile-stats;
   display: flex;
+  justify-content: space-between;
 }
 
 .bio-link {
