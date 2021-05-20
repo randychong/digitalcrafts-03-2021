@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  background: url(../src/images/clouds.png) no-repeat center;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+}
