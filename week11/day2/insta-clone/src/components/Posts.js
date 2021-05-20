@@ -24,6 +24,18 @@ export default class Posts extends Component {
                     <p>
                         <img src={Randy} className="posts"></img>
                     </p>
+
+                    <p>
+                        <img src={Randy} className="posts"></img>
+                    </p>
+
+                    <p>
+                        <img src={Randy} className="posts"></img>
+                    </p>
+
+                    <p>
+                        <img src={Randy} className="posts"></img>
+                    </p>
                 </div>
             </div>
         )
