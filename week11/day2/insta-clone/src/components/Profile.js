@@ -26,7 +26,7 @@ export default class Profile extends Component {
                     </div>
 
                     <div className="profile-stats">
-                        <p className="posts">141 posts</p>
+                        <p className="posts-stats">141 posts</p>
 
                         <p>
                             <a className="followers">
