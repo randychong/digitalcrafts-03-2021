@@ -5,6 +5,11 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px black solid;
+  align-items: center;
+  border-bottom: 1px lightgray solid;
   padding: 1rem;
+}
+
+.search {
+  height: 2rem;
 }
