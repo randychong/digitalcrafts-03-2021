@@ -1,7 +1,7 @@
-import React,  {useState } from 'react';
 import {SignUpButton, SignUpFormInput, SignUpFormDiv} from "./styledComponents/SignUpFormStyles"
 
 const SignUpForm = (props) => {
+    console.log(props)
     return (
         <div>
             <SignUpFormDiv>

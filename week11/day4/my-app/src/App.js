@@ -1,5 +1,5 @@
 import './App.css';
-import React,  {useState } from 'react';
+import React,  {useState} from 'react';
 import SignUpForm from "./components/SignUpForm"
 import UserDetails from "./components/UserDetails"
 
@@ -19,11 +19,6 @@ function App() {
       password2={password2} setPassword2={setPassword2}
       />
       <UserDetails
-      firstName={firstName}
-      lastName={lastName}
-      email={email}
-      password={password}
-      password2={password2}
       />
     </div>
   );

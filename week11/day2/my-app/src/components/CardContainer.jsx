@@ -16,7 +16,6 @@ export default class CardContainer extends Component {
       this.setState({
         newPokemon: this.props.pokemonData[0].pokemon
       })
-      console.log(this.state.newPokemon)
     }
 
     searchCriteria= (event) => {
@@ -46,7 +45,6 @@ export default class CardContainer extends Component {
       this.setState({
         newPokemon: [newPokemonData,...this.state.newPokemon]
       })
-      console.log(newPokemonData)
     }
     render() {
         const filteredData = this.state.newPokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria))
