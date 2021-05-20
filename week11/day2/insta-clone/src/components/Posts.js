@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Randy from "../images/randy.png"
+import Doge from "../images/doge.png"
 import Pixels from "../images/pixels.png"
 import TV from "../images/tv.png"
 import Ribbon from "../images/ribbon.png"
@@ -30,27 +30,27 @@ export default class Posts extends Component {
 
                 <div className="posts-container">
                     <p>
-                        <img src={Randy} className="posts"></img>
+                        <img src={Doge} className="posts"></img>
                     </p>
 
                     <p>
-                        <img src={Randy} className="posts"></img>
+                        <img src={Doge} className="posts"></img>
                     </p>
 
                     <p>
-                        <img src={Randy} className="posts"></img>
+                        <img src={Doge} className="posts"></img>
                     </p>
 
                     <p>
-                        <img src={Randy} className="posts"></img>
+                        <img src={Doge} className="posts"></img>
                     </p>
 
                     <p>
-                        <img src={Randy} className="posts"></img>
+                        <img src={Doge} className="posts"></img>
                     </p>
 
                     <p>
-                        <img src={Randy} className="posts"></img>
+                        <img src={Doge} className="posts"></img>
                     </p>
                 </div>
             </div>

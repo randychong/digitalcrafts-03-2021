@@ -17,6 +17,12 @@ body {
   height: 3rem;
 }
 
+.instagram {
+  font-family: "Satisfy", cursive;
+  font-size: 24px;
+  margin-right: 5rem;
+}
+
 .icon-container {
   display: flex;
 }
@@ -25,7 +31,7 @@ body {
   margin-left: 1.5rem;
 }
 
-#randy {
+#doge {
   border-radius: 100px;
   border: 1px black solid;
   padding: 0.1rem;
@@ -44,6 +50,7 @@ body {
 .profile-image {
   height: 10rem;
   border-radius: 100px;
+  margin-top: -2rem;
 }
 
 .settings {
@@ -100,13 +107,13 @@ body {
 .name {
   grid-area: name;
   height: 2rem;
-  margin-bottom: -0.5rem;
+  margin-bottom: -1.5rem;
 }
 
 .bio {
   grid-area: bio;
   height: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: -1.5rem;
 }
 
 .bio-link {
@@ -117,11 +124,12 @@ body {
 }
 
 .highlights-icon {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 100px;
   border: lightgray 1px solid;
   padding: 0.2rem;
+  margin-bottom: -0.5rem;
 }
 
 .highlights-container {
@@ -135,8 +143,8 @@ body {
 
 .content-container {
   border-top: lightgray 1px solid;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .posts-menu {
@@ -146,6 +154,7 @@ body {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0.5rem;
   font-size: 14px;
 }
 
@@ -161,7 +170,7 @@ body {
 }
 
 .posts {
-  width: 18rem;
+  height: 16rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Randy from "../images/randy.png"
+import Doge from "../images/doge.png"
 import Settings from "../images/settings.png"
 
 export default class Profile extends Component {
@@ -9,14 +9,14 @@ export default class Profile extends Component {
                 <div className="profile-image-container">
                     <p>
                         <a>
-                            <img src={Randy} className="profile-image"></img>
+                            <img src={Doge} className="profile-image"></img>
                         </a>
                     </p>
                 </div>
                 
                 <div className="profile-info">
                     <div className="handle-container">
-                        <p className="handle">randallchong</p>
+                        <p className="handle">doge</p>
 
                         <button className="edit">Edit Profile</button>
 
@@ -26,32 +26,31 @@ export default class Profile extends Component {
                     </div>
 
                     <div className="profile-stats">
-                        <p className="posts-stats">141 posts</p>
+                        <p className="posts-stats">420 posts</p>
 
                         <p>
                             <a className="followers">
-                                281 followers
+                                420 followers
                             </a>
                         </p>
 
                         <p>
                             <a className="following">
-                                279 following
+                                420 following
                             </a>
                         </p>
                     </div>
 
                     <p className="name">
-                        Randy Chong
+                        Kabosu
                     </p>
                     
                     <p className="bio">
-                        총랜디 |
-                        Web Designer | Traveler | Gamer | Chef
+                        Doge | Crypto Leader | Influencer | Memelord
                     </p>
 
                     <p>
-                        <a href="randychong.github.io/chongskitchen" className="bio-link">randychong.github.io/chongskitchen</a>
+                        <a href="randychong.github.io/chongskitchen" className="bio-link">doge.com</a>
                     </p>
                 </div>
             </div>

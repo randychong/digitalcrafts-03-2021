@@ -3,7 +3,7 @@ import Home from "../images/home.png"
 import Send from "../images/send.png"
 import Compass from "../images/compass.png"
 import Heart from "../images/heart.png"
-import Randy from "../images/randy.png"
+import Doge from "../images/doge.png"
 
 export default class Navbar extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class Navbar extends Component {
                 <navbar className="navbar">
                     <div className="instagram">
                         <p>
-                            <a>Instagram</a>
+                            <a className="instagram">Instagram</a>
                         </p>
                     </div>
 
@@ -43,8 +43,8 @@ export default class Navbar extends Component {
                         </p>
                         <p>
                             <a>
-                                <img src={Randy} className="nav-icon"
-                                id="randy"></img>
+                                <img src={Doge} className="nav-icon"
+                                id="doge"></img>
                             </a>
                         </p>
                     </div>
