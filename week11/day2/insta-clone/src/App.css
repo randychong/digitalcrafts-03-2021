@@ -130,3 +130,20 @@ body {
   padding-left: 5rem;
   text-align: center;
 }
+
+.content-container {
+  border-top: lightgray 1px solid;
+}
+
+.posts-menu {
+  display: flex;
+}
+
+.posts-container {
+  display: flex;
+}
+
+.posts {
+  height: 18rem;
+  margin: 1rem;
+}
