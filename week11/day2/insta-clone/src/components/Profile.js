@@ -26,27 +26,27 @@ export default class Profile extends Component {
                     </div>
 
                     <div className="profile-stats">
-                        <p className="posts-stats">420 posts</p>
+                        <p className="posts-stats">
+                            <strong>420</strong> posts</p>
 
                         <p>
                             <a className="followers">
-                                420 followers
+                                <strong>420M</strong> followers
                             </a>
                         </p>
 
                         <p>
                             <a className="following">
-                                420 following
+                                <strong>420K</strong> following
                             </a>
                         </p>
                     </div>
 
                     <p className="name">
-                        Kabosu
+                        <strong>Kabosu</strong>
                     </p>
                     
-                    <p className="bio">
-                        Doge | Crypto Leader | Influencer | Memelord
+                    <p className="bio">                               Doge | Crypto Leader | Influencer | Memelord
                     </p>
 
                     <p>

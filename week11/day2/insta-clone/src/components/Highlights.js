@@ -11,7 +11,7 @@ export default class Highlight extends Component {
             <div className="highlights-container">
                 <div>
                     <img src={Doge} className="highlights-icon"></img>
-                    <p>Travel</p>
+                    <p>Much Wow</p>
                 </div>
                 <div>
                     <img src={Doge} className="highlights-icon"></img>
@@ -19,11 +19,11 @@ export default class Highlight extends Component {
                 </div>
                 <div>
                     <img src={Doge} className="highlights-icon"></img>
-                    <p>Food</p>
+                    <p>Stonks</p>
                 </div>
                 <div>
                     <img src={Doge} className="highlights-icon"></img>
-                    <p>The Moon</p>
+                    <p>To The Moon</p>
                 </div>
             </div>
         )
