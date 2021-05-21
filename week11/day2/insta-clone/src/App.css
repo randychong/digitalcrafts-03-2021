@@ -175,3 +175,20 @@ body {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
+.posts:hover {
+  filter: brightness(70%);
+}
+
+.instagram,
+.nav-icon,
+.profile-image,
+.edit,
+.settings,
+.followers,
+.following,
+.highlights-icon-container,
+.post-icon-container,
+.posts:hover {
+  cursor: pointer;
+}

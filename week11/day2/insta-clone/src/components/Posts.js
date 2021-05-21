@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import Doge from "../images/doge.png"
 import Pixels from "../images/pixels.png"
 import TV from "../images/tv.png"
 import Ribbon from "../images/ribbon.png"
 import User from "../images/user.png"
-
 import CatAndDoge from "../images/cat-and-doge.png"
 import CuteDoge from "../images/cutedoge.png"
 import DogeAndElon from "../images/doge-and-elon.png"
@@ -17,19 +15,19 @@ export default class Posts extends Component {
         return (
             <div className="content-container">
                 <div className="posts-menu">
-                    <p>
+                    <p className="post-icon-container">
                         <img src={Pixels} className="post-icons"></img>
                         POSTS
                     </p>
-                    <p>
+                    <p className="post-icon-container">
                         <img src={TV} className="post-icons"></img>
                         IGTV
                     </p>
-                    <p>
+                    <p className="post-icon-container">
                         <img src={Ribbon} className="post-icons"></img>
                         SAVED
                     </p>
-                    <p>
+                    <p className="post-icon-container">
                         <img src={User} className="post-icons"></img>
                         TAGGED
                     </p>
@@ -59,6 +57,9 @@ export default class Posts extends Component {
                     <p>
                         <img src={CatAndDoge} className="posts"></img>
                     </p>
+
+                    <p></p>
+                    <p>Loading...</p>
                 </div>
             </div>
         )

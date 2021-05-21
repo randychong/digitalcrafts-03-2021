@@ -12,7 +12,9 @@ export default class Navbar extends Component {
                 <navbar className="navbar">
                     <div className="instagram">
                         <p>
+                            <strong>
                             <a className="instagram">Instagram</a>
+                            </strong>
                         </p>
                     </div>
 
