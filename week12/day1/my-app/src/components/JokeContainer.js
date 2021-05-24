@@ -3,7 +3,8 @@ import Joke from "../components/Joke"
 
 export default function JokeContainer() {
     const [joke, setJoke] = useState("")
-    const [name, setName] = useState("Joe")
+    const [oldJokes, setOldJokes] = useState([])
+    const jokeCache = []
 
     // useEffect(() => {
     //     console.log("hey")
@@ -11,7 +12,6 @@ export default function JokeContainer() {
 
     useEffect(() => {
         getJoke()
-        console.log("hey you")
     }, []);
 
     // useEffect(() => {
@@ -24,15 +24,15 @@ export default function JokeContainer() {
         const response = await fetch("https://icanhazdadjoke.com", { headers: { Accept: "application/json" },
         });
         const json =  await response.json();
-        setJoke(json)
+        setJoke(json.joke)
     }
     return (
         <div>
             <h1>Joke Container</h1>
-            <p></p>
-            <button>Add</button>
-            <button>Subtract</button>
-            <Joke />
+            <Joke joke={joke} setJoke={setJoke}/>
+            <button onClick={() => {
+                getJoke()
+            }}>New Joke</button>
         </div>
     )
 }
