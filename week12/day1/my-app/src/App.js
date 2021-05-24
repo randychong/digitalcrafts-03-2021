@@ -1,14 +1,11 @@
 import './App.css';
+import JokeContainer from "./components/JokeContainer"
 
 function App() {
-  const joke = async () => {
-    let data = await fetch("https://icanhazdadjoke.com")
-    let json = data.json
-  }
-  joke()
   return (
     <div className="App">
       <h1>UseEffect</h1>
+      <JokeContainer />
     </div>
   );
 }
