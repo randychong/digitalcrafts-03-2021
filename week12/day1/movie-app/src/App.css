@@ -1,0 +1,66 @@
+body {
+  background: url(https://bit.ly/34evwBZ) no-repeat fixed center;
+  background-size: 100vmax;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+}
+
+.page-header {
+  color: white;
+}
+
+.search-container {
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+}
+
+.search {
+  outline: none;
+  margin-right: 1rem;
+  height: 2rem;
+  padding-left: 1rem;
+  border-radius: 5px;
+}
+
+.search-button {
+  height: 2.3rem;
+  width: 12rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px white solid;
+  color: white;
+  transition: 200ms ease;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  color: black;
+  background: white;
+}
+
+.movies-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-card {
+  display: grid;
+  place-items: center;
+  background: white;
+  margin: 1rem;
+}
+
+.movie-poster {
+  width: 300px;
+  height: 450px;
+}
+
+.title {
+  width: 80%;
+  text-align: center;
+}

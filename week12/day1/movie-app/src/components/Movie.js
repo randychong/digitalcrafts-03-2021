@@ -1,12 +1,11 @@
 import React from 'react'
 
 export default function Movie(props) {
-    console.log(props)
     return (
-        <div>
-            <h1>Movie</h1>
-            <img src={props.movie.Poster}></img>
-            <p>{props.movie.Title}</p>
+        <div className="movie-card">
+            <img src={props.poster} className="movie-poster"></img>
+            <p className="title">{props.title}</p>
+            <p>Release Date: {props.year}</p>
         </div>
     )
 }
