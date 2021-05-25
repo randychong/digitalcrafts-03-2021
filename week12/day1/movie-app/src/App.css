@@ -22,7 +22,7 @@ body {
   outline: none;
   margin-right: 1rem;
   height: 2rem;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   border-radius: 5px;
 }
 
@@ -53,11 +53,12 @@ body {
   place-items: center;
   background: white;
   margin: 1rem;
+  border-radius: 5px;
 }
 
 .movie-poster {
   width: 300px;
-  height: 450px;
+  height: 400px;
 }
 
 .title {

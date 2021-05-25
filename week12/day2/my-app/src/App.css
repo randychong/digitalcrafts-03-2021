@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+}

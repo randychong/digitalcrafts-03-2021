@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Movie from "../components/Movie"
+import Key from "../Key"
 
 export default function MovieContainer() {
     const [movies, setMovies] = useState([])
     const [search, setSearch] = useState("")
 
-    const onSubmit = (e) => {
-		e.preventDefault();
-		getMovies();
-	}
-
     const getMovies = async () => {
-        const response = await fetch(`http://www.omdbapi.com/?s=${search}&apikey=27c555f7`)
+        const response = await fetch(`http://www.omdbapi.com/?s=${search}&apikey=${Key}`)
         const json = await response.json();
         setMovies(json.Search)
     }
@@ -21,12 +17,12 @@ export default function MovieContainer() {
             <div className="search-container">
                 <h1 className="page-header">Movie Finder</h1>
 
-                <form onSubmit={onSubmit}>
+                <form>
                     <input
                         type="text"
                         value={search}
                         className="search"
-                        placeholder="movie name..."
+                        placeholder="movie name (ex. Star Wars)"
                         onChange={(e) => {
                             setSearch(e.target.value)
                             console.log(search)
