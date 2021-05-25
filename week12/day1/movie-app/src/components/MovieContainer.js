@@ -44,7 +44,11 @@ export default function MovieContainer() {
             
             <div className="movies-container">
                 {movies.map((movie) => (
-                    <Movie title={movie.Title} poster={movie.Poster} year={movie.Year}/>
+                    <Movie
+                    title={movie.Title} 
+                    poster={movie.Poster}
+                    year={movie.Year}
+                    />
                 ))}
             </div>
         </div>
