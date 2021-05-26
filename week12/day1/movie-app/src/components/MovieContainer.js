@@ -5,7 +5,6 @@ import Key from "../Key"
 export default function MovieContainer() {
     const [search, setSearch] = useState("")
     const [movies, setMovies] = useState([])
-    const [details, setDetails] = useState("")
 
     useEffect(() => {
         getFirstMovies()    
@@ -27,7 +26,7 @@ export default function MovieContainer() {
     return (
         <div>
             <div className="search-container">
-                <h1 className="page-header">Movie Finder</h1>
+                <h1 className="page-header">Showmaker</h1>
 
                 <form>
                     <input
