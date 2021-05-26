@@ -10,6 +10,7 @@ body {
 
 .page-header {
   color: white;
+  font-size: 40px;
 }
 
 .search-container {
@@ -21,19 +22,22 @@ body {
 .search {
   outline: none;
   margin-right: 1rem;
-  height: 2rem;
+  height: 2.5rem;
+  width: 16rem;
   padding-left: 0.5rem;
   border-radius: 5px;
+  font-size: 20px;
 }
 
 .search-button {
-  height: 2.3rem;
+  height: 2.8rem;
   width: 12rem;
   background: transparent;
   border-radius: 5px;
   border: 1px white solid;
   color: white;
   transition: 200ms ease;
+  font-size: 20px;
 }
 
 .search-button:hover {
@@ -45,23 +49,49 @@ body {
 .movies-container {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .movie-card {
   display: grid;
   place-items: center;
   background: white;
-  margin: 1rem;
+  margin: 2rem 1rem auto 1rem;
+  padding: 1rem;
   border-radius: 5px;
+  width: 350px;
 }
 
 .movie-poster {
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
 }
 
 .title {
   width: 80%;
   text-align: center;
+}
+
+.details {
+  width: 80%;
+  text-align: left;
+}
+
+.details-button {
+  height: 2.5rem;
+  width: 12rem;
+  background-color: #9ab5e1;
+  background-image: linear-gradient(315deg, #9ab5e1 0%, #f39fdc 74%);
+  filter: brightness(90%);
+  opacity: 0.8;
+  border: none;
+  border-radius: 5px;
+  transition: 200ms ease;
+}
+
+.details-button:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+  opacity: 1;
+  border: 1px black solid;
 }

@@ -1,15 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Movie from "../components/Movie"
 import Key from "../Key"
 
 export default function MovieContainer() {
-    const [movies, setMovies] = useState([])
     const [search, setSearch] = useState("")
+    const [movies, setMovies] = useState([])
+    const [details, setDetails] = useState("")
+
+    useEffect(() => {
+        getFirstMovies()    
+    }, [])
+
+    const getFirstMovies = async () => {
+        const response = await fetch(`http://www.omdbapi.com/?s=star+wars&apikey=${Key}`)
+        const json = await response.json();
+        setMovies(json.Search)
+    }
 
     const getMovies = async () => {
         const response = await fetch(`http://www.omdbapi.com/?s=${search}&apikey=${Key}`)
         const json = await response.json();
         setMovies(json.Search)
+        console.log(movies)
     }
 
     return (
@@ -25,7 +37,6 @@ export default function MovieContainer() {
                         placeholder="movie name (ex. Star Wars)"
                         onChange={(e) => {
                             setSearch(e.target.value)
-                            console.log(search)
                     }}></input>
                     <button
                         type="submit"
@@ -33,7 +44,6 @@ export default function MovieContainer() {
                         onClick={(e) => {
                             e.preventDefault()
                             getMovies()
-                            console.log(movies)
                     }}>Search</button>
                 </form>
             </div>
@@ -44,6 +54,7 @@ export default function MovieContainer() {
                     title={movie.Title} 
                     poster={movie.Poster}
                     year={movie.Year}
+                    id={movie.imdbID}
                     />
                 ))}
             </div>
