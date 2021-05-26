@@ -26,7 +26,7 @@ export default function MovieContainer() {
     return (
         <div>
             <div className="search-container">
-                <h1 className="page-header">Showmaker</h1>
+                <h1 className="page-header">Show Stars</h1>
 
                 <form>
                     <input
