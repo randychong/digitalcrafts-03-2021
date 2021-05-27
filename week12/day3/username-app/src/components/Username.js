@@ -15,7 +15,9 @@ export default function Username() {
                 dispatch({ type: "CHANGE_NAME"})}
             >Change Name</button>
             <h1>Array</h1>
-            <p>Array: {array}</p>
+            {array.map((person) => (
+                <p>Name: {person.name}</p>
+            ))}
             <button
                 onClick={() => 
                 dispatch({ type: "FILL_ARRAY"})}
