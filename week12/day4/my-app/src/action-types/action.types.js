@@ -1,0 +1,1 @@
+export const INSERT_OBJECT = "INSERT_OBJECT"

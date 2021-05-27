@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from  "react-redux"
+import { add, subtract } from "../actions/counter-actions"
 
 export default function Counter() {
     const counter = useSelector(state => state.counter)
@@ -11,11 +12,11 @@ export default function Counter() {
             <p>{counter}</p>
             <button
                 onClick={() => 
-                dispatch({ type: "ADD"})}
+                add(dispatch)}
             >Add</button>
             <button
                 onClick={() => 
-                dispatch({ type: "SUBTRACT"})}
+                subtract(dispatch)}
             >Subtract</button>
         </div>
     )
