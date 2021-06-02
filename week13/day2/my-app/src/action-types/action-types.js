@@ -1,0 +1,2 @@
+export const DISPLAY_NAME = "DISPLAY_NAME"
+export const DISPLAY_PASSWORD = "DISPLAY_PASSWORD"
