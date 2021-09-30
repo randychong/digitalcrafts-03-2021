@@ -1,22 +1,20 @@
 import {SignUpButton, SignUpFormInput, SignUpFormDiv} from "./styledComponents/SignUpFormStyles"
 
 const SignUpForm = (props) => {
-    console.log(props)
     return (
         <div>
             <SignUpFormDiv>
                 <h1>Create Account</h1>
-                <SignUpFormInput onChange={(e) => props.setFirstName(e.target.value)} className="form-input" type="text" placeholder="Firstname"/>
-
-                <SignUpFormInput onChange={(e) => props.setLastName(e.target.value)} className="form-input" type="text" placeholder="Lastname"/>
-
-                <SignUpFormInput onChange={(e) => props.setEmail(e.target.value)} className="form-input" type="text" placeholder="Email"/>
-
-                <SignUpFormInput onChange={(e) => props.setPassword(e.target.value)} className="form-input" type="password" placeholder="Password"/>
-
-                <SignUpFormInput onChange={(e) => props.setPassword2(e.target.value)} className="form-input" type="password" placeholder="Re-type password"/>
-
-                <SignUpButton type="submit">Sign Up</SignUpButton>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="firstName" className="form-input" type="text" placeholder="First Name"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="lastName" className="form-input" type="text" placeholder="Last Name"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="birth" className="form-input" type="text" placeholder="Date of Birth"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="address" className="form-input" type="text" placeholder="Address"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="city" className="form-input" type="text" placeholder="City"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="state" className="form-input" type="text" placeholder="State"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="zip" className="form-input" type="text" placeholder="Zip"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="username" className="form-input" type="text" placeholder="Username"/>
+                <SignUpFormInput onChange={(e) => props.setForm({...props.form, [e.target.name]: e.target.value})} name="email" className="form-input" type="text" placeholder="Email"/>
+                <SignUpButton onClick={() => props.submitForm} type="submit">Sign Up</SignUpButton>
             </SignUpFormDiv>
         </div>
     )
