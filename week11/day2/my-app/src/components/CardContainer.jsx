@@ -46,8 +46,16 @@ export default class CardContainer extends Component {
         newPokemon: [newPokemonData,...this.state.newPokemon]
       })
     }
+
+    deletePokemon = (index) => {
+      const pokeData = this.state.newPokemon
+      console.log(pokeData)
+      pokeData.filter((pokemon) => {
+        this.setState(pokemon != index)
+      })
+    }
     render() {
-        const filteredData = this.state.newPokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria))
+        const filteredData = this.state.newPokeon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria))
         return (
             <div>
                 <h1>Card Container</h1>
@@ -101,7 +109,8 @@ export default class CardContainer extends Component {
                 </div>
 
                 <div className="card-container">
-                {filteredData.map((singlePokemon,index) => <Card key={singlePokemon.name}  pokemon={singlePokemon}  />)}
+                {filteredData.map((singlePokemon, index) => <Card key={singlePokemon.name}  pokemon={singlePokemon}  index={index}
+                delPokemon={this.deletePokemon}/>)}
                 </div>
             </div>
         )

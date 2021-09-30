@@ -6,6 +6,7 @@ export default class Card extends Component {
     }
     render() {
         const {hp, id, name, sprites} = this.props.pokemon
+        const {index, delPokemon} = this.props
         const uppercased = name.toUpperCase()
         return (
             <div className="pokemon-card">
@@ -13,6 +14,7 @@ export default class Card extends Component {
                 <p>{uppercased}</p>
                 <p>ID: {id}</p>
                 <p>HP: {hp}</p>
+                <button onClick={() => delPokemon(index)}>Delete</button>
             </div>
         )
     }
